@@ -2,9 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import './App.css';
 import { AuthLayout } from "./components/Layouts/AuthLayout";
 import { MainLayout } from "./components/Layouts/MainLayout";
-import RegisterPage from "./pages/RegisterPage";
-import { LoginPage } from "./pages/LoginPage";
-import { RecommendedPage } from "./pages/RecommendedPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { RecommendedPage } from "./pages/RecommendedPage/RecommendedPage";
 import { LibraryPage } from "./pages/LibraryPage";
 import { MyBookPage } from "./pages/MyBookPage";
 

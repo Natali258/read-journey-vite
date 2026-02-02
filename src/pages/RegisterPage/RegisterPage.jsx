@@ -1,6 +1,6 @@
 import React from 'react'
-import RegisterForm from '../components/RegisterForm/RegisterForm'
-import MainPicture from '../components/MainPicture/MainPicture'
+import RegisterForm from '../../components/RegisterForm/RegisterForm'
+import MainPicture from '../../components/MainPicture/MainPicture'
 import { StlSectionsContainer } from './RegisterPage.styled'
 
 
