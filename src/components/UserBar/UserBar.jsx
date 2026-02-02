@@ -7,7 +7,7 @@ export const UserBar = () => {
         <span>
             Photo
         </span>
-        <span>Text</span>
+        <span>Text11111111111111111</span>
     </StlUserContainer>
   )
 }
