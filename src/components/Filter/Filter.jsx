@@ -1,14 +1,15 @@
 import React from 'react'
+import { FilterBtn, FilterContainer, FilterForm, FilterInput, FilterTitle } from './Filter.styled'
 
 export const Filter = () => {
   return (
-    <div>
-        <p>Filters</p>
-        <form action="">
-            <input type="text" name='Book title:'/>
-            <input type="text" name='The author:'/>
-            <button type='submit'>To apply</button>
-        </form>
-    </div>
+    <FilterContainer>
+        <FilterTitle>Filters:</FilterTitle>
+        <FilterForm action="">
+            <FilterInput type="text" name='Book title:'/>
+            <FilterInput type="text" name='The author:'/>
+            <FilterBtn type='submit'>To apply</FilterBtn>
+        </FilterForm>
+    </FilterContainer>
   )
 }
