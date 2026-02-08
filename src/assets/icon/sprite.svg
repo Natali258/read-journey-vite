@@ -42,7 +42,7 @@
 </svg>
 <svg>
     <symbol id="icon-log-in" viewBox="0 0 32 32">
-        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M18.667 22.667l6.667-6.667-6.667-6.667M25.333 16h-18.667"></path>
+        <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M18.667 22.667l6.667-6.667-6.667-6.667M25.333 16h-18.667" stroke="currentColor"></path>
     </symbol>
 </svg>
 <svg>
