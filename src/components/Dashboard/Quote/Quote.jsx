@@ -1,12 +1,13 @@
 import React from 'react'
+import { QuoteContainer, QuoteLiImg, QuoteLiText, QuoteLiTextSpan, QuoteUl } from './Quote.styled'
 
 export const Quote = () => {
   return (
-    <div>
-        <ul>
-            <li><img src="" alt="" /></li>
-            <li>"Books are windows to the world, and reading is a journey into the unknown."</li>
-        </ul>
-    </div>
+    <QuoteContainer>
+        <QuoteUl>
+            <QuoteLiImg><img src="/src/assets/img/books.png" alt="books" /></QuoteLiImg>
+            <QuoteLiText>"Books are <QuoteLiTextSpan>windows</QuoteLiTextSpan> to the world, <br /> and reading is a journey into the unknown."</QuoteLiText>
+        </QuoteUl>
+    </QuoteContainer>
   )
 }
