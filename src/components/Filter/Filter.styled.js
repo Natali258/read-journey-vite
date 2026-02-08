@@ -14,7 +14,7 @@ font-size: 14px;
 leading-trim: NONE;
 line-height: 18px;
 letter-spacing: -2%;
-// color: var(--main-text-color);`
+color: var(--main-text-color);`
 
 export const FilterForm = s.form`
 display: flex;
