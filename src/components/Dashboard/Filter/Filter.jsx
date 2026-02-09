@@ -6,8 +6,8 @@ export const Filter = () => {
     <FilterContainer>
         <FilterTitle>Filters:</FilterTitle>
         <FilterForm action="">
-            <FilterInput type="text" name='Book title:'/>
-            <FilterInput type="text" name='The author:'/>
+            <FilterInput type="text" placeholder='Book title:'/>
+            <FilterInput type="text" placeholder='The author:'/>
             <FilterBtn type='submit'>To apply</FilterBtn>
         </FilterForm>
     </FilterContainer>
