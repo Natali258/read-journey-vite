@@ -29,7 +29,12 @@ box-sizing: border-box;
 padding: 16px 14px;
 background-color: var(--select-background-color);
 border-radius: 12px;
-border: none`
+border: none;
+
+&:hover, &:focus-visible {
+    outline: none;
+    border: 1px solid var(--border-color);
+}`
 
 export const FilterBtn = s.button`
 padding: 12px 28px;
@@ -46,4 +51,10 @@ font-size: 16px;
 leading-trim: NONE;
 line-height: 18px;
 letter-spacing: 2%;
-color: var(--main-text-color);`
+color: var(--main-text-color);
+
+&:hover {
+    background-color: var(--main-text-color);
+    color: var(--body-background-color);
+}
+`

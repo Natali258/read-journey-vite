@@ -69,7 +69,10 @@ line-height: 200%;
 letter-spacing: -0.02em;
 text-decoration: underline;
 text-decoration-skip-ink: none;
-color: var(--grey-text-color)`
+color: var(--grey-text-color);
+
+&:hover {
+    color: var(--main-text-color);}`
 
 export const DescriptionLogoSpan = s.span`
 display: inline-block;
