@@ -5,7 +5,7 @@ import { MainLayout } from "./components/Layouts/MainLayout";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RecommendedPage } from "./pages/RecommendedPage/RecommendedPage";
-import { LibraryPage } from "./pages/LibraryPage";
+import { LibraryPage } from "./pages/LibraryPage/LibraryPage";
 import { MyBookPage } from "./pages/MyBookPage";
 
 
