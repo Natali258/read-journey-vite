@@ -12,4 +12,5 @@ font-size: 18px;
 line-height: 18px;
 letter-spacing: 2%;
 text-transform: uppercase;
+color: var(--main-text-color);
 `
