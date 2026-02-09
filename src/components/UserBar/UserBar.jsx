@@ -1,13 +1,13 @@
 import React from 'react'
-import { StlUserContainer } from './UserBar.styled'
+import { StlUserContainer, StlUserName, StlUserPhoto } from './UserBar.styled'
 
 export const UserBar = () => {
   return (
     <StlUserContainer>
-        <span>
-            Photo
-        </span>
-        <span>Text111111111111111</span>
+        <StlUserPhoto>
+            I
+        </StlUserPhoto>
+        <StlUserName>Ilona Ratushniak</StlUserName>
     </StlUserContainer>
   )
 }

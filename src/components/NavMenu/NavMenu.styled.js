@@ -20,5 +20,8 @@ font-size: 16px;
 line-height: 18px;
 letter-spacing: -2%;
 text-decoration: none;
-color: var(--main-text-color);
+color: var(--focus-word-color);
+
+&:hover {
+    color: var(--main-text-color);}
 `
