@@ -1,7 +1,8 @@
 import React from 'react'
 import { InitialState } from '../api/booksAPI'
-import { RecommendedBooksName, RecommendedBooksWriter, RecommendedBtn, RecommendedContainer, RecommendedContainerBtn, RecommendedImg, RecommendedItem, RecommendedList, RecommendedTitle } from './RecommendedBooks.styled';
+import { RecommendedBtn, RecommendedContainer, RecommendedContainerBtn, RecommendedList, RecommendedTitle } from './RecommendedBooks.styled';
 import Icon from '../Icon/Icon';
+import { RecommendedBooksItem } from '../RecommendedBooksItem/RecommendedBooksItem';
 
 export const RecommendedBooks = () => {
     const books = InitialState.books;
@@ -18,11 +19,7 @@ export const RecommendedBooks = () => {
                 <Icon name='icon-right'size={{width: 20, height: 20}} />
             </RecommendedBtn>
         </RecommendedContainerBtn>
-        <RecommendedList>{books.slice(0, 10).map((book) => <RecommendedItem key={book._id}>
-            <RecommendedImg src={book.imageUrl} alt={book.title} width="100"/>
-            <RecommendedBooksName>{book.title}</RecommendedBooksName>
-            <RecommendedBooksWriter>{book.author}</RecommendedBooksWriter>
-        </RecommendedItem>)}</RecommendedList>
+        <RecommendedList>{books.slice(0, 10).map((book) => <RecommendedBooksItem book={book} />)}</RecommendedList>
     </RecommendedContainer>
   )
 }

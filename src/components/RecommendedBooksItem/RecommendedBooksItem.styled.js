@@ -1,0 +1,25 @@
+import s from 'styled-components';
+
+export const RecommendedItem = s.li`
+width: 137px;
+height: 247px;`
+
+export const RecommendedImg = s.img`
+width: 100%;
+border-radius: 8px;`
+
+export const RecommendedBooksName = s.h2`
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 14px;
+line-height: 129%;
+letter-spacing: -0.02em;
+color: var(--main-text-color)`
+
+export const RecommendedBooksWriter = s.p`
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 10px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: var(--grey-text-color)`

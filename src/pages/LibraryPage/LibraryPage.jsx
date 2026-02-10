@@ -3,6 +3,7 @@ import { LibraryPageContainer } from './LibraryPage.styled'
 import { Dashboard } from '../../components/Dashboard/Dashboard'
 import { AddBook } from '../../components/Dashboard/AddBook/AddBook'
 import { ListRecomendedBooks } from '../../components/Dashboard/ListRecomendedBooks/ListRecomendedBooks'
+import { MyLibraryBooksContainer } from '../../components/MyLibraryBooks/MyLibraryBooks.styled'
 
 export const LibraryPage = () => {
   return (
@@ -11,6 +12,7 @@ export const LibraryPage = () => {
         <AddBook/>
         <ListRecomendedBooks/>
       </Dashboard>
+      <MyLibraryBooksContainer/>
     </LibraryPageContainer>
   )
 }
