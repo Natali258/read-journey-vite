@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import './App.css';
+import './App.styled.js';
 import { AuthLayout } from "./components/Layouts/AuthLayout";
 import { MainLayout } from "./components/Layouts/MainLayout";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
@@ -7,12 +7,13 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RecommendedPage } from "./pages/RecommendedPage/RecommendedPage";
 import { LibraryPage } from "./pages/LibraryPage/LibraryPage";
 import { MyBookPage } from "./pages/MyBookPage";
+import { AppContainer } from "./App.styled.js";
 
 
 function App() {
 
   return (
-    <div className="app">
+    <AppContainer>
       <Routes>
         <Route element={<AuthLayout/>}>
           <Route path="/register" element={<RegisterPage/>}></Route>
@@ -25,7 +26,7 @@ function App() {
           <Route path="/reading" element={<MyBookPage/>}></Route>
         </Route>
       </Routes>
-    </div>
+    </AppContainer>
   );
 }
 
