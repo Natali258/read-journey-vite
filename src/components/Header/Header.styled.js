@@ -21,5 +21,10 @@ font-style: Bold;
 font-size: 16px;
 line-height: 18px;
 letter-spacing: 2%;
-color: var(--main-text-color)
+color: var(--main-text-color);
+
+&:hover {
+    background-color: var(--main-text-color);
+    color: var(--body-background-color);
+}
 `
