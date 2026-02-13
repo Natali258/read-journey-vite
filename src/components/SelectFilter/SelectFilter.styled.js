@@ -2,11 +2,12 @@ import s from 'styled-components'
 
 export const SelectFilterContainer = s.div`
 position: relative;
+display: inline-flex;
+left:61%;
 padding: 14px;
 border: 1px solid var(--border-color);
 border-radius: 12px;
 width: 153px;
-height: 46px;
 
 font-family: var(--font-family);
 font-weight: 500;
@@ -18,6 +19,7 @@ color: var(--main-text-color);
 `
 
 export const SelectFilterArrow = s.span`
+    margin-left: auto;
   transform: ${({ $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   transition: transform 0.3s;
 `;
@@ -26,23 +28,22 @@ export const SelectFilterList = s.ul`
   position: absolute;
   top: 110%;
   left: 0;
-  width: 100%;
-  padding: 0;
+  width: 85%;
+  padding: 14px;
   margin: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background: var(--select-background-color);
+  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 10;
   list-style: none;
+  color: var(--grey-text-color)
 `;
 
 export const SelectFilterListItem = s.li`
-  padding: 10px 15px;
+    margin-bottom: 7px;
+    &:last-child { margin-bottom: 0; }
+
   &:hover {
-    background-color: #f0f7ff;
-    color: #007bff;
+    color: var(--main-text-color);
   }
-  &:first-child { border-radius: 8px 8px 0 0; }
-  &:last-child { border-radius: 0 0 8px 8px; }
 `;

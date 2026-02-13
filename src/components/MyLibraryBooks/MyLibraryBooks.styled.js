@@ -2,12 +2,15 @@ import s from 'styled-components'
 
 export const MyLibraryBooksContainer = s.div`
 position: relative;
+// display: flex;
+
 padding: 40px;
 border-radius: 30px;
 background-color: var(--container-background-color);
 min-width: 847px;`
 
 export const MyLibraryBooksTitle = s.p`
+display: inline-block;
 font-family: var(--font-family);
 font-weight: 700;
 font-size: 28px;
