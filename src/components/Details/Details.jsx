@@ -1,7 +1,10 @@
 import React from 'react'
+import { Progress } from './Progress/Progress'
 
 export const Details = () => {
   return (
-    <div>Details</div>
+    <div>
+      <Progress/>
+    </div>
   )
 }

@@ -1,7 +1,8 @@
 import React from 'react'
+import { MyBookContainer } from './MyBook.styled'
 
 export const MyBook = () => {
   return (
-    <div>MyBook</div>
+    <MyBookContainer>MyBook</MyBookContainer>
   )
 }
