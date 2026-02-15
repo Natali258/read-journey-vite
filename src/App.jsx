@@ -6,8 +6,8 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RecommendedPage } from "./pages/RecommendedPage/RecommendedPage";
 import { LibraryPage } from "./pages/LibraryPage/LibraryPage";
-import { MyBookPage } from "./pages/MyBookPage";
 import { AppContainer } from "./App.styled.js";
+import { ReadingPage } from "./pages/ReadingPage/ReadingPage.jsx";
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<AuthLayout/>} />
           <Route path="/recommended" element={<RecommendedPage/>}></Route>
           <Route path="/library" element={<LibraryPage/>}></Route>
-          <Route path="/reading" element={<MyBookPage/>}></Route>
+          <Route path="/reading" element={<ReadingPage/>}></Route>
         </Route>
       </Routes>
     </AppContainer>

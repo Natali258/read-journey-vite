@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MyBookPage = () => {
+export const MyBook = () => {
   return (
     <div>MyBook</div>
   )
