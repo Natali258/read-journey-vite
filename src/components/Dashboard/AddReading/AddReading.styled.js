@@ -4,6 +4,7 @@ export const AddReadingContainer = s.div`
 display: block;`
 
 export const AddReadingTitle = s.p`
+margin-bottom: 8px;
 font-family: var(--font-family);
 font-weight: 500;
 font-size: 14px;
@@ -14,7 +15,8 @@ color: var(--main-text-color);`
 export const AddReadingForm = s.form`
 display: flex;
 flex-direction: column;
-gap: 20px;`
+gap: 20px;
+`
 
 export const AddReadingInput = s.input`
 box-sizing: border-box;
@@ -34,15 +36,12 @@ align-self: flex-start;
 background-color: var(--container-background-color);
 border-radius: 30px;
 border: 1px solid var(--border-color);
-margin-top: 12px;
 
-font-family: Gilroy;
+font-family: var(--font-family);
 font-weight: 700;
-font-style: Bold;
 font-size: 16px;
-leading-trim: NONE;
-line-height: 18px;
-letter-spacing: 2%;
+line-height: 113%;
+letter-spacing: 0.02em;
 color: var(--main-text-color);
 
 &:hover {
