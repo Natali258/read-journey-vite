@@ -9,7 +9,7 @@ export const MyBook = () => {
         <img src="/src/assets/img/books-title.png" alt="books-title" />
         <MyBookName>I See You Are Interested In The Dark</MyBookName>
         <MyBookAuthor>Hilarion Pavlyuk</MyBookAuthor>
-        <IconButton><Inner /></IconButton>
+        <div><IconButton><Inner /></IconButton></div>
       </MyBookBox>
     </MyBookContainer>
   )

@@ -48,6 +48,7 @@ export const IconButton = s.button`
   border-radius: 50%;
   border: 2px solid #fff;
   background: #0f0f0f;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,6 +67,7 @@ export const Inner = s.div`
   background: #ff0000;
   border-radius: 50%;
   transition: transform 200ms ease;
+  text-align: center;
 
   ${IconButton}:focus & {
     width: 18px;
