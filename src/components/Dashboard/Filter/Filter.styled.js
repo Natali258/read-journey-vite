@@ -39,7 +39,7 @@ border: none;
 export const FilterBtn = s.button`
 padding: 12px 28px;
 align-self: flex-start;
-background-color: var(--body-background-color);
+background-color: var(--container-background-color);
 border-radius: 30px;
 border: 1px solid var(--border-color);
 margin-top: 12px;

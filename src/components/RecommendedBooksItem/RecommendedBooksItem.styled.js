@@ -2,7 +2,19 @@ import s from 'styled-components';
 
 export const RecommendedItem = s.li`
 width: 137px;
-height: 247px;`
+height: 247px;
+
+&:hover {
+    transform: scale(1.08);
+  }`
+
+export const RecommendedBtnImg = s.button`
+cursor: pointer;
+border: none;
+
+// &:hover {
+//     transform: scale(1.08);
+//   }`
 
 export const RecommendedImg = s.img`
 width: 100%;
