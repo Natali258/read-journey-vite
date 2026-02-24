@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import {
   Overlay,
   ModalBox,
+  CloseButton,
 } from './Modal.styled';
 
 export const Modal = ({ isOpen, onClose, children }) => {
@@ -25,6 +26,7 @@ export const Modal = ({ isOpen, onClose, children }) => {
   return createPortal(
     <Overlay onClick={onClose}>
       <ModalBox onClick={e => e.stopPropagation()}>
+        <CloseButton onClick={onClose}>X</CloseButton>
         {children}
       </ModalBox>
     </Overlay>,

@@ -14,13 +14,7 @@ export const Overlay = s.div`
 `;
 
 export const ModalBox = s.div`
-  // background: #fff;
-  // border-radius: 12px;
-
-  // padding: 24px;
-  // min-width: 320px;
-  // max-width: 90vw;
-  // max-height: 90vh;
+  position: relative;
   overflow-y: auto;
 
   border: 1px solid var(--modal-background-color);
@@ -30,3 +24,21 @@ export const ModalBox = s.div`
   // width: 500px;
   // height: 483px;
 `;
+
+export const CloseButton = s.button`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 22px;
+  height: 22px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-size: 22px;
+  line-height: 1;
+  color: var(--main-text-color);
+`;
+
