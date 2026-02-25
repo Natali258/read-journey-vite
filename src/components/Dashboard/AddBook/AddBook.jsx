@@ -1,7 +1,10 @@
 import React from 'react'
 import { AddBookBtn, AddBookContainer, AddBookForm, AddBookInput, AddBookTitle } from './AddBook.styled'
+import { useModal } from '../../Modal/ModalContext';
+import { ModalGoodJob } from '../../Modal/ModalGoodJob/ModalGoodJob';
 
 export const AddBook = () => {
+  const { openModal } = useModal();
   return (
     <AddBookContainer>
         <AddBookTitle>Create your library:</AddBookTitle>
@@ -9,7 +12,7 @@ export const AddBook = () => {
             <AddBookInput type="text" placeholder="Book title:"/>
             <AddBookInput type="text" placeholder="The author:"/>
             <AddBookInput type="text" placeholder="Number of pages:"/>
-            <AddBookBtn type='submit'>Add book</AddBookBtn>
+            <AddBookBtn type='button' onClick={() => openModal(<ModalGoodJob/>)}>Add book</AddBookBtn>
         </AddBookForm>
     </AddBookContainer>
   )

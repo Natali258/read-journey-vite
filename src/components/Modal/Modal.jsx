@@ -24,7 +24,11 @@ export const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <Overlay onClick={onClose}>
+    <Overlay onClick={e => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  }}>
       <ModalBox onClick={e => e.stopPropagation()}>
         <CloseButton onClick={onClose}>X</CloseButton>
         {children}
