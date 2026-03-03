@@ -1,10 +1,10 @@
 import React from "react";
 import {
   ModalStartReadingAuthor,
-  ModalStartReadingBtn,
   ModalStartReadingContainer,
   ModalStartReadingImg,
   ModalStartReadingName,
+  ModalStartReadingNavLink,
   ModalStartReadingPage,
 } from "./ModalStartReading.styled";
 
@@ -17,9 +17,9 @@ export const ModalStartReading = ({ book }) => {
       <ModalStartReadingName>{book.title}</ModalStartReadingName>
       <ModalStartReadingAuthor>{book.author}</ModalStartReadingAuthor>
       <ModalStartReadingPage>{book.totalPages}</ModalStartReadingPage>
-      <ModalStartReadingBtn type="button" to="/reading">
+      <ModalStartReadingNavLink to="/reading">
         Start reading
-      </ModalStartReadingBtn>
+      </ModalStartReadingNavLink>
     </ModalStartReadingContainer>
   );
 };

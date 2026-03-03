@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import s from 'styled-components';
 
 export const ModalStartReadingContainer = s.div`
@@ -38,15 +39,14 @@ letter-spacing: -0.02em;
 text-align: center;
 color: var(--main-text-color)`
 
-export const ModalStartReadingBtn = s.button`
+export const ModalStartReadingNavLink = s(NavLink)`
 margin-top: 32px;
 border: 1px solid var(--border-color);
 border-radius: 30px;
 padding: 14px 28px;
 background-color: var(--container-background-color);
-// width: 162px;
-// height: 46px;
-// 
+text-decoration: none;
+
 font-family: var(--font-family);
 font-weight: 700;
 font-size: 16px;
