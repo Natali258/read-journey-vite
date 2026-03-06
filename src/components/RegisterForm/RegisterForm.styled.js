@@ -7,9 +7,10 @@ flex:1;
 /* width: 600px; */
 /* height: 736px; */
 padding: 40px 64px 40px 64px;
-border: 1px solid var(--container-background-color);
+/* border: 1px solid var(--container-background-color); */
 border-radius: 30px;
-box-sizing: border-box
+box-sizing: border-box;
+background-color: var(--container-background-color);
 `
 
 export const StlTitleRegister = styled.h1`
@@ -23,9 +24,11 @@ font-style: Bold;
 font-size: 64px;
 line-height: 60px;
 letter-spacing: 2%;
+color: var(--main-text-color);
 
 span {
     display:block;
+    color: var(--focus-word-color);
 }
 `
 
@@ -46,6 +49,7 @@ width: 100%;
 export const StlInputRegister = styled.input`
 padding: 16px 14px 16px 14px;
 border-radius: 12px;
+background-color: var(--select-background-color);
 border: 1px solid var(--container-background-color)
 `
 
@@ -54,7 +58,8 @@ margin-top: 82px;
 width: 225px;
 padding: 16px 54px 16px 54px;
 border-radius: 30px;
-border:1px solid var(--container-background-color);
+border:1px solid var(--border-color);
+background-color: var(--container-background-color);
 
 font-family: Gilroy;
 font-weight: 700;
@@ -62,6 +67,13 @@ font-style: Bold;
 font-size: 20px;
 line-height: 20px;
 letter-spacing: 2%;
+color: var(--main-text-color);
+
+&:hover {
+    border: none;
+    background-color: var(--main-text-color);
+    color: var(--select-background-color);
+}
 `
 
 export const StlNavLinkLogin = styled(NavLink)`
