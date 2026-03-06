@@ -4,7 +4,9 @@ import { api, setToken } from "../../axiosConfig/api";
 
 export const registerThunk = createAsyncThunk('auth/register', async(credentials, thunkAPI) => {
     try {
-     const data = await api.post('users/signup', credentials)
+        console.log(credentials);
+        
+     const {data} = await api.post('users/signup', credentials)
      setToken(data.token)
         return data;  
     } catch (error) {
