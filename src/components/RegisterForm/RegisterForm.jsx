@@ -9,9 +9,9 @@ const RegisterForm = () => {
         <StlTitleRegister>Expand your mind, reading <span>a book</span></StlTitleRegister>
         <StlFormRegister>
             <StlFieldsRegister>
-                <StlInputRegister type="text" />
-                <StlInputRegister type="text" />
-                <StlInputRegister type="text" />
+                <StlInputRegister type="text" placeholder='Name:' />
+                <StlInputRegister type="text" placeholder='Mail:'/>
+                <StlInputRegister type="text" placeholder='Password:' />
             </StlFieldsRegister>
             <StlBtnRegister type='submit'>Registration</StlBtnRegister>
         </StlFormRegister>

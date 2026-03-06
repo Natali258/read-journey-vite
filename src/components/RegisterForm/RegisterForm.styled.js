@@ -50,7 +50,14 @@ export const StlInputRegister = styled.input`
 padding: 16px 14px 16px 14px;
 border-radius: 12px;
 background-color: var(--select-background-color);
-border: 1px solid var(--container-background-color)
+border: none;
+
+color: var(--main-text-color);
+
+&:hover, &:focus-visible {
+    
+    border: 1px solid var(--container-background-color);
+}
 `
 
 export const StlBtnRegister = styled.button`
@@ -87,5 +94,9 @@ font-style: Medium;
 font-size: 14px;
 line-height: 18px;
 letter-spacing: -2%;
-color: var(--grey-text-color)
+color: var(--grey-text-color);
+
+&:hover {
+    color: var(--main-text-color);
+}
 `
