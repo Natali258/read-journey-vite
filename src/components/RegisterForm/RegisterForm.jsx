@@ -20,9 +20,9 @@ const RegisterForm = () => {
         <StlTitleRegister>Expand your mind, reading <span>a book</span></StlTitleRegister>
         <StlFormRegister onSubmit={handleSubmit(submit)}>
             <StlFieldsRegister>
-                <StlInputRegister type="text" placeholder='Name:' {...register('Name')} />
-                <StlInputRegister type="text" placeholder='Mail:'{...register('Mail')}/>
-                <StlInputRegister type="text" placeholder='Password:' {...register('Password')}/>
+                <StlInputRegister type="text" placeholder='Name:' {...register('name')} />
+                <StlInputRegister type="text" placeholder='Mail:'{...register('email')}/>
+                <StlInputRegister type="text" placeholder='Password:' {...register('password')}/>
             </StlFieldsRegister>
             <StlBtnRegister type='submit'>Registration</StlBtnRegister>
         </StlFormRegister>

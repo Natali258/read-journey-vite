@@ -7,6 +7,7 @@ export const registerThunk = createAsyncThunk('auth/register', async(credentials
         console.log(credentials);
         
      const {data} = await api.post('users/signup', credentials)
+     console.log(data);
      setToken(data.token)
         return data;  
     } catch (error) {
