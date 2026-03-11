@@ -4,10 +4,7 @@ import styled from "styled-components";
 export const StlRegisterContainer = styled.div`
 position: relative;
 flex:1;
-/* width: 600px; */
-/* height: 736px; */
 padding: 40px 64px 40px 64px;
-/* border: 1px solid var(--container-background-color); */
 border-radius: 30px;
 box-sizing: border-box;
 background-color: var(--container-background-color);
@@ -51,7 +48,6 @@ padding: 16px 14px 16px 14px;
 border-radius: 12px;
 background-color: var(--select-background-color);
 border: none;
-
 color: var(--main-text-color);
 
 &:hover, &:focus-visible {

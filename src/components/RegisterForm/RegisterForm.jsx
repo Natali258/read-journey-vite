@@ -12,8 +12,7 @@ const RegisterForm = () => {
     dispatch(registerThunk(data));
     reset();
   };
-    
-   
+  
   return (
     <StlRegisterContainer>
         <Logo/>
