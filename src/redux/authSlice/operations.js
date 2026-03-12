@@ -14,3 +14,13 @@ export const registerThunk = createAsyncThunk('auth/register', async(credentials
         return thunkAPI.rejectWithValue(error.message);
     }
 })
+
+export const LoginThunk = createAsyncThunk('auth/login', async(credentials, thunkAPI) => {
+    try {
+        const {data} = await api.post('users/signin', credentials)
+        setToken(data.token)
+        return data;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+    }
+})

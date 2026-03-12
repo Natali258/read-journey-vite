@@ -2,12 +2,16 @@ import React from 'react'
 import Logo from '../Logo/Logo'
 import { StlBtnLogin, StlFieldsLogin, StlFormLogin, StlInputLogin, StlLoginContainer, StlNavLinkRegister, StlTitleLogin } from './LoginForm.styled'
 import { useForm } from 'react-hook-form'
+import { useDispatch } from 'react-redux'
+import { LoginThunk } from '../../redux/authSlice/operations'
 
 const LoginForm = () => {
   const {register, handleSubmit, reset} = useForm()
+  const dispatch = useDispatch()
 
   const submit = data => {
     console.log(data);
+    dispatch(LoginThunk(data))
     reset();
   }
 
