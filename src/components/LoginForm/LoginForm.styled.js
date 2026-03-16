@@ -63,6 +63,7 @@ padding: 16px 54px 16px 54px;
 border-radius: 30px;
 border:1px solid var(--border-color);
 background-color: var(--container-background-color);
+color: var(--main-text-color);
 
 font-family: Gilroy;
 font-weight: 700;

@@ -3,7 +3,7 @@ import Logo from '../Logo/Logo'
 import { StlBtnLogin, StlFieldsLogin, StlFormLogin, StlInputLogin, StlLoginContainer, StlNavLinkRegister, StlTitleLogin } from './LoginForm.styled'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { LoginThunk } from '../../redux/authSlice/operations'
+import { loginThunk } from '../../redux/authSlice/operations'
 
 const LoginForm = () => {
   const {register, handleSubmit, reset} = useForm()
@@ -11,7 +11,7 @@ const LoginForm = () => {
 
   const submit = data => {
     console.log(data);
-    dispatch(LoginThunk(data))
+    dispatch(loginThunk(data))
     reset();
   }
 
