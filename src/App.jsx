@@ -10,6 +10,7 @@ import { AppContainer } from "./App.styled.js";
 import { ReadingPage } from "./pages/ReadingPage/ReadingPage.jsx";
 import { PublicRoute } from "./routes/PublicRoute.jsx";
 import { PrivateRoute } from "./routes/PrivateRoute.jsx";
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}></Route>
         </Route>
       </Routes>
+      <ToastContainer />
     </AppContainer>
   );
 }
