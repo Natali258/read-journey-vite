@@ -10,7 +10,6 @@ const LoginForm = () => {
   const dispatch = useDispatch()
 
   const submit = data => {
-    console.log(data);
     dispatch(loginThunk(data))
     reset();
   }
