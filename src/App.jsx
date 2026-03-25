@@ -26,11 +26,11 @@ function App() {
     <AppContainer>
       <Routes>
         <Route element={<AuthLayout/>}>
+          <Route path="/" element={<PublicRoute><LoginPage/></PublicRoute>} />
           <Route path="/register" element={<PublicRoute><RegisterPage/></PublicRoute>}></Route>
           <Route path="/login" element={<PublicRoute><LoginPage/></PublicRoute>}></Route>
         </Route>
         <Route element={<MainLayout/>}>
-          <Route path="/" element={<AuthLayout/>} />
           <Route path="/recommended" element={<PrivateRoute><RecommendedPage/></PrivateRoute>}></Route>
           <Route path="/library" element={<PrivateRoute><LibraryPage/></PrivateRoute>}></Route>
           <Route path="/reading" element={<PrivateRoute><ReadingPage/></PrivateRoute>}></Route>
