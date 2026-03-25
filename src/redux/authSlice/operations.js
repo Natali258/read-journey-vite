@@ -34,3 +34,18 @@ export const logoutThunk = createAsyncThunk('auth/logout', async () => {
         toast.error('Something went wrong.') 
     }
 })
+
+export const refreshThunk = createAsyncThunk('auth/refresh', async(_, thunkApi) => {
+    const savedToken = thunkApi.getState().auth.token;
+    console.log(savedToken);
+    if (!savedToken) {
+     return thunkApi.rejectWithValue('Token is not exist!');
+    }
+  try {
+    setToken(savedToken);
+    const { data } = await api.get('users/current');
+    return data;
+  } catch (error) {
+    return thunkApi.rejectWithValue(error.message);
+  }
+})

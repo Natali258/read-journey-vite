@@ -11,9 +11,16 @@ import { ReadingPage } from "./pages/ReadingPage/ReadingPage.jsx";
 import { PublicRoute } from "./routes/PublicRoute.jsx";
 import { PrivateRoute } from "./routes/PrivateRoute.jsx";
 import { ToastContainer } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { refreshThunk } from "./redux/authSlice/operations.js";
 
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(refreshThunk());
+  }, [dispatch]);
 
   return (
     <AppContainer>
