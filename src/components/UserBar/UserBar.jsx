@@ -6,13 +6,15 @@ import { selectUser } from '../../redux/authSlice/AuthSlice';
 export const UserBar = () => {
 
   const user = useSelector(selectUser);
-  const firstLetter = user.name[0].toUpperCase();
+  console.log(user);
+  
+  const firstLetter = user?.name?.charAt(0).toUpperCase() || "";
   return (
     <StlUserContainer>
         <StlUserPhoto>
             {firstLetter}
         </StlUserPhoto>
-        <StlUserName>{user.name}</StlUserName>
+        <StlUserName>{user?.name}</StlUserName>
     </StlUserContainer>
   )
 }

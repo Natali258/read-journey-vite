@@ -11,18 +11,22 @@ import { ReadingPage } from "./pages/ReadingPage/ReadingPage.jsx";
 import { PublicRoute } from "./routes/PublicRoute.jsx";
 import { PrivateRoute } from "./routes/PrivateRoute.jsx";
 import { ToastContainer } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { refreshThunk } from "./redux/authSlice/operations.js";
+import { selectIsLoading } from "./redux/authSlice/AuthSlice.js";
+import { Loader } from "./components/Loader/Loader.jsx";
 
 
 function App() {
+  const isLoading = useSelector(selectIsLoading);
+  
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(refreshThunk());
   }, [dispatch]);
 
-  return (
+  return isLoading ? (<Loader/>) : (
     <AppContainer>
       <Routes>
         <Route element={<AuthLayout/>}>

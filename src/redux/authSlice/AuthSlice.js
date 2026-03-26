@@ -7,6 +7,7 @@ const initialState = {
         email:''
     },
     token: null,
+    refreshToken: null,
     isLoggedIn: false,
     isLoading: false,
 }
@@ -27,18 +28,34 @@ const AuthSlice = createSlice({
         state.isLoggedIn = true;
       })
     .addCase(loginThunk.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+      console.log(action);
+        state.user = action.payload;
+        console.log(state.user);
         state.token = action.payload.token;
+        state.refreshToken = action.payload.refreshToken;
         state.isLoggedIn = true;
+        state.isLoading = false;
       })
     .addCase(logoutThunk.fulfilled, () => {
         return initialState
       })
+    .addCase(refreshThunk.pending, state => {
+      state.isLoading = true;
+    })
     .addCase(refreshThunk.fulfilled, (state, action) => {
+      console.log(action);
+      console.log(state.user.name);
         state.user.name = action.payload.name;
         state.user.email = action.payload.email;
+        state.refreshToken = action.payload.refreshToken;
+        state.token = action.payload.token;
         state.isLoggedIn = true;
-      })}
+        state.isLoading = false;
+      })
+      .addCase(refreshThunk.rejected, state => {
+        state.token = null;
+        state.isLoading = false;
+      });}
 })
 
 export const authReducer = AuthSlice.reducer;
