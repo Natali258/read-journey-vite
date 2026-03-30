@@ -46,7 +46,7 @@ const AuthSlice = createSlice({
         state.refreshToken = action.payload.refreshToken;
         state.token = action.payload.token;
         state.isLoggedIn = true;
-        state.isLoading = false;
+        state.isLoading = false; 
       })
       .addCase(refreshThunk.rejected, state => {
         state.token = null;
