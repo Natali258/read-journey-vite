@@ -28,9 +28,7 @@ const AuthSlice = createSlice({
         state.isLoggedIn = true;
       })
     .addCase(loginThunk.fulfilled, (state, action) => {
-      console.log(action);
         state.user = action.payload;
-        console.log(state.user);
         state.token = action.payload.token;
         state.refreshToken = action.payload.refreshToken;
         state.isLoggedIn = true;
@@ -43,8 +41,6 @@ const AuthSlice = createSlice({
       state.isLoading = true;
     })
     .addCase(refreshThunk.fulfilled, (state, action) => {
-      console.log(action);
-      console.log(state.user.name);
         state.user.name = action.payload.name;
         state.user.email = action.payload.email;
         state.refreshToken = action.payload.refreshToken;

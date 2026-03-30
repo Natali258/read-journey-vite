@@ -4,10 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../../redux/authSlice/AuthSlice';
 
 export const UserBar = () => {
-
   const user = useSelector(selectUser);
-  console.log(user);
-  
   const firstLetter = user?.name?.charAt(0).toUpperCase() || "";
   return (
     <StlUserContainer>
