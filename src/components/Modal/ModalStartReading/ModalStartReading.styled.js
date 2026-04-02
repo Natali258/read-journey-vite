@@ -8,17 +8,20 @@ align-items: center;
 margin: 0 41px 0 41px;`
 
 export const ModalStartReadingImg = s.img`
-width: 100%;
+width: 153px;
+height: 233px;
 border-radius: 8px;`
 
 export const ModalStartReadingName = s.p`
+width: 153px;
 margin-top: 16px;
 font-family: var(--font-family);
 font-weight: 700;
 font-size: 20px;
 line-height: 100%;
 letter-spacing: -0.02em;
-color: var(--main-text-color);`
+color: var(--main-text-color);
+`
 
 export const ModalStartReadingAuthor = s.p`
 margin-top: 2px;

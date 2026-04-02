@@ -17,7 +17,9 @@ border: none;
 //   }`
 
 export const RecommendedImg = s.img`
-width: 100%;
+// width: 100%;
+width: 137px;
+height: 208px;
 border-radius: 8px;`
 
 export const RecommendedBooksName = s.h2`
@@ -26,7 +28,10 @@ font-weight: 700;
 font-size: 14px;
 line-height: 129%;
 letter-spacing: -0.02em;
-color: var(--main-text-color)`
+color: var(--main-text-color);
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;`
 
 export const RecommendedBooksWriter = s.p`
 font-family: var(--font-family);
