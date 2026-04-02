@@ -5,7 +5,7 @@ import { ModalStartReading } from '../Modal/ModalStartReading/ModalStartReading'
 
 export const RecommendedBooksItem = ({ book }) => {
   const { openModal } = useModal();
-    
+  
   return (
     <RecommendedItem key={book._id}>
       <RecommendedBtnImg onClick={() => openModal(<ModalStartReading book={book}/>)}>

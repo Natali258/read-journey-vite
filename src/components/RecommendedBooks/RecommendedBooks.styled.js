@@ -15,27 +15,6 @@ line-height: 114%;
 letter-spacing: 0.02em;
 color: var(--main-text-color)`
 
-export const RecommendedContainerBtn = s.div`
-position: absolute;
-top: 6%;
-right: 40px;
-display: flex;
-gap: 8px
-
-`
-export const RecommendedBtn = s.button`
-width: 40px;
-height: 40px;
-border-radius: 50%;
-border: 1px solid var(--focus-word-color);
-background-color: var(--container-background-color);
-color: var(--focus-word-color);
-
-&:hover {
-    background-color: var(--main-text-color);
-    color: var(--container-background-color);}
-`
-
 export const RecommendedList = s.ul`
 display: grid;
 grid-template-columns: repeat(5, 1fr);

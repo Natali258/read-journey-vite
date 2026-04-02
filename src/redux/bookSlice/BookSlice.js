@@ -4,6 +4,8 @@ import { getBooksThunk } from './operations';
 
 const initialState = {
   books: [],
+  page: 1,
+  totalPages: 1,
   isLoading: false,
 };
 
@@ -12,12 +14,16 @@ const BookSlice =createSlice({
   initialState,
   selectors: {
     selectBooks: state => state.books,
+    selectPage: state => state.page,
+    selectTotalPages: state => state.totalPages,
     selectIsLoading: state => state.isLoading
   },
   extraReducers: builder => {
     builder
     .addCase(getBooksThunk.fulfilled, (state, action) => {
       state.books = action.payload.results;
+      state.page = action.payload.page;
+      state.totalPages = action.payload.totalPages;
       state.isLoading = false;
     })
     .addCase(getBooksThunk.pending, state => {
@@ -29,4 +35,6 @@ const BookSlice =createSlice({
   }})
 
   export const bookReducer = BookSlice.reducer;
-  export const { selectBooks, selectIsLoading } = BookSlice.selectors;
+  export const { selectBooks, selectPage, selectTotalPages, selectIsLoading } = BookSlice.selectors;
+
+  
