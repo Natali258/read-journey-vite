@@ -6,6 +6,10 @@ const initialState = {
   books: [],
   page: 1,
   totalPages: 1,
+  filter: {
+    title: '',
+    author: ''
+  },
   isLoading: false,
 };
 
@@ -16,7 +20,19 @@ const BookSlice =createSlice({
     selectBooks: state => state.books,
     selectPage: state => state.page,
     selectTotalPages: state => state.totalPages,
+    selectFilter: state => state.filter,
     selectIsLoading: state => state.isLoading
+  },
+  reducers: {
+    setTitleFilter: (state, action) => {
+      state.filter.title = action.payload;
+    },
+    setAuthorFilter: (state, action) => {
+      state.filter.author = action.payload;
+    },
+    resetFilters: state => {
+      state.filter = { title: '', author: '' };
+    },
   },
   extraReducers: builder => {
     builder
@@ -24,6 +40,7 @@ const BookSlice =createSlice({
       state.books = action.payload.results;
       state.page = action.payload.page;
       state.totalPages = action.payload.totalPages;
+      state.filter.name = action.payload.filter;
       state.isLoading = false;
     })
     .addCase(getBooksThunk.pending, state => {
@@ -35,6 +52,8 @@ const BookSlice =createSlice({
   }})
 
   export const bookReducer = BookSlice.reducer;
-  export const { selectBooks, selectPage, selectTotalPages, selectIsLoading } = BookSlice.selectors;
+  export const { setTitleFilter, setAuthorFilter, resetFilters } =
+  BookSlice.actions;
+  export const { selectBooks, selectPage, selectTotalPages, selectFilter, selectIsLoading } = BookSlice.selectors;
 
   
