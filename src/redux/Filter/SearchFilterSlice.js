@@ -15,19 +15,13 @@ const SearchFilterSlice = createSlice({
     selectSearchFilter: state => state.filter
     },
   reducers: {
-    setTitleFilter: (state, action) => {
-      state.filter.title = action.payload;
-    },
-    setAuthorFilter: (state, action) => {
-      state.filter.author = action.payload;
-    },
-    resetFilters: state => {
-      state.filter = { title: '', author: '' };
-    },
+    setFilter: (state, action) => {
+      state.filter = action.payload;
+    }
   },
 })
 
-export const { setTitleFilter, setAuthorFilter, resetFilters } =
+export const { setFilter } =
   SearchFilterSlice.actions;
 export const {selectSearchFilter} = SearchFilterSlice.selectors;
 export const searchFilterReducer = SearchFilterSlice.reducer;

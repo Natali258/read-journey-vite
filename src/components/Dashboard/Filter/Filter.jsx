@@ -6,48 +6,45 @@ import {
   FilterInput,
   FilterTitle,
 } from "./Filter.styled";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { getBooksThunk } from "../../../redux/bookSlice/operations";
-import {
-  resetFilters,
-  selectSearchFilter,
-  setAuthorFilter,
-  setTitleFilter,
-} from "../../../redux/Filter/SearchFilterSlice";
+import { useForm } from "react-hook-form";
+import { setFilter } from "../../../redux/Filter/SearchFilterSlice";
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectSearchFilter);
-  console.log(filter);
+   const { register, handleSubmit, reset } = useForm({
+    defaultValues: {
+      title: "",
+      author: "",
+    },
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const onSubmit  = (data) => {
+   dispatch(setFilter(data));
     dispatch(
       getBooksThunk({
         page: 1,
         limit: 10,
-        ...filter,
+        ...data,
       }),
     );
-    dispatch(resetFilters())
+    reset();
   };
 
   return (
     <FilterContainer>
       <FilterTitle>Filters:</FilterTitle>
-      <FilterForm action="" onSubmit={handleSubmit}>
+      <FilterForm action="" onSubmit={handleSubmit(onSubmit)}>
         <FilterInput
           type="text"
           placeholder="Book title:"
-          value={filter.title}
-          onChange={(e) => dispatch(setTitleFilter(e.target.value))}
+          {...register("title")}
         />
         <FilterInput
           type="text"
           placeholder="The author:"
-          value={filter.author}
-          onChange={(e) => dispatch(setAuthorFilter(e.target.value))}
+          {...register("author")}
         />
         <FilterBtn type="submit">To apply</FilterBtn>
       </FilterForm>
