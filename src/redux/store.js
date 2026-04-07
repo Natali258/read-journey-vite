@@ -15,6 +15,7 @@ import { authReducer } from "./authSlice/AuthSlice";
 import storage from "redux-persist/lib/storage";
 import persistReducer from "redux-persist/es/persistReducer";
 import { bookReducer } from "./bookSlice/BookSlice";
+import { searchFilterReducer } from "./Filter/SearchFilterSlice";
 
 // const enhancer = devToolsEnhancer()
 // export const store = createStore(CounterReducer, enhancer)
@@ -40,7 +41,8 @@ const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 export const store = configureStore({
   reducer: {
     auth: persistedAuthReducer,
-    books: bookReducer
+    books: bookReducer,
+    searchFilter: searchFilterReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

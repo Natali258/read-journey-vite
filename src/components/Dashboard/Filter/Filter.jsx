@@ -7,25 +7,31 @@ import {
   FilterTitle,
 } from "./Filter.styled";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilter, setAuthorFilter, setTitleFilter } from "../../../redux/bookSlice/BookSlice";
 import { getBooksThunk } from "../../../redux/bookSlice/operations";
+import {
+  resetFilters,
+  selectSearchFilter,
+  setAuthorFilter,
+  setTitleFilter,
+} from "../../../redux/Filter/SearchFilterSlice";
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectFilter);
+  const filter = useSelector(selectSearchFilter);
+  console.log(filter);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     dispatch(
-        getBooksThunk({
-          page: 1,
-          limit: 10,
-          ...filter,
-        })
-      );
+      getBooksThunk({
+        page: 1,
+        limit: 10,
+        ...filter,
+      }),
+    );
+    dispatch(resetFilters())
   };
-  
 
   return (
     <FilterContainer>
