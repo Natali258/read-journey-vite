@@ -11,6 +11,7 @@ import { getBooksThunk } from "../../redux/bookSlice/operations";
 export const Pagination = () => {
     const dispatch = useDispatch();
     const totalPages = useSelector(selectTotalPages);
+    console.log(totalPages);
     const [searchParams, setSearchParams] = useSearchParams();
     const page = Number(searchParams.get("page")) || 1;
 
