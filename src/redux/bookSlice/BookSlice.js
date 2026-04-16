@@ -8,7 +8,7 @@ const initialState = {
     totalPages: 1,
     isLoading: false,
   },
-  owner: {
+  ownBooks: {
     items: [],
   }
 };
@@ -21,6 +21,7 @@ const BookSlice = createSlice({
     selectPage: (state) => state.recommend.page,
     selectTotalPages: (state) => state.recommend.totalPages,
     selectIsLoading: (state) => state.recommend.isLoading,
+    selectOwnBooks: (state) => state.ownBooks.items, 
   },
   extraReducers: (builder) => {
     builder

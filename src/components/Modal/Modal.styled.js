@@ -21,6 +21,8 @@ export const ModalBox = s.div`
   background: var(--container-background-color);
   border-radius: 12px;
   padding: 50px;
+  max-width: 500px;
+  width: 100%;
   // width: 500px;
   // height: 483px;
 `;

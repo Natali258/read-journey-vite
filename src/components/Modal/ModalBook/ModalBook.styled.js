@@ -8,6 +8,8 @@ margin: 0 100px 0 100px;`
 
 export const ModalBookImg = s.img`
 // width: 100%;
+width: 153px;
+height: 233px;
 border-radius: 8px;`
 
 export const ModalBookName = s.p`
@@ -17,7 +19,8 @@ font-weight: 700;
 font-size: 20px;
 line-height: 100%;
 letter-spacing: -0.02em;
-color: var(--main-text-color);`
+color: var(--main-text-color);
+text-align: center;`
 
 export const ModalBookAuthor = s.p`
 margin-top: 2px;
