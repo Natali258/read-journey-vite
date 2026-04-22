@@ -31,18 +31,18 @@ export const addOwnBooksThunc = createAsyncThunk(
 
 export const getOwnBookThunk = createAsyncThunk(
   "books/getOwnBook",
-  async ({ page = 1, limit = 10, title = "", author = "" }, thunkApi) => {
+  async (_, thunkApi) => {
     try {
       const { data } = await api.get(
-        `books/own?page=${page}&limit=${limit}&title=${title}&author=${author}`,
+        `books/own`,
       );
       console.log(data);
-      const uniqueBooks = Array.from(
-        new Map(data.map(book => [book._id, book])).values()
-      );
-      console.log(uniqueBooks);
-      return uniqueBooks;
-      // return data;
+      // const uniqueBooks = Array.from(
+      //   new Map(data.map(book => [book._id, book])).values()
+      // );
+      // console.log(uniqueBooks);
+      // return uniqueBooks;
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

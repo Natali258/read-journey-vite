@@ -41,7 +41,7 @@ const BookSlice = createSlice({
         state.recommend.isLoading = false;
       })
       .addCase(getOwnBookThunk.fulfilled, (state, action) => {
-        state.ownBooks.items = action.payload.results;
+        state.ownBooks.items = action.payload;
         state.ownBooks.page = action.payload.page;
         state.ownBooks.totalPages = action.payload.totalPages;
         state.ownBooks.isLoading = false;
@@ -54,5 +54,5 @@ export const {
   selectBooks,
   selectPage,
   selectTotalPages,
-  selectIsLoading,
+  selectIsLoading, selectOwnBooks,
 } = BookSlice.selectors;

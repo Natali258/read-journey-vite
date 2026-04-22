@@ -1,10 +1,16 @@
-import React from 'react'
+
 import { InitialState } from '../../api/booksAPI';
 import { ListRecomendedBooksContainer, ListRecomendedBooksImg, ListRecomendedBooksLi, ListRecomendedBooksLinkContainer, ListRecomendedBooksLogoSpan, ListRecomendedBooksName, ListRecomendedBooksNavLink, ListRecomendedBooksTitle, ListRecomendedBooksUl, ListRecomendedBooksWriter } from './ListRecomendedBooks.styled';
 import Icon from '../../Icon/Icon'
+import { useSelector } from 'react-redux';
+import { selectBooks} from '../../../redux/bookSlice/BookSlice';
 
 export const ListRecomendedBooks = () => {
-    const books = InitialState.books;
+    const books = useSelector(selectBooks);
+    console.log(books);
+
+
+    
   return (
     <ListRecomendedBooksContainer>
         <ListRecomendedBooksTitle>Recommended books</ListRecomendedBooksTitle>
