@@ -4,18 +4,21 @@ import { ListRecomendedBooksContainer, ListRecomendedBooksImg, ListRecomendedBoo
 import Icon from '../../Icon/Icon'
 import { useSelector } from 'react-redux';
 import { selectBooks} from '../../../redux/bookSlice/BookSlice';
+import { useMemo } from 'react';
 
 export const ListRecomendedBooks = () => {
     const books = useSelector(selectBooks);
-    console.log(books);
-
+    const randomBooks = useMemo(() => {
+        return [...books].sort(() => 0.5 - Math.random()).slice(0, 3);
+    }, [books]);
+    console.log(randomBooks); 
 
     
   return (
     <ListRecomendedBooksContainer>
         <ListRecomendedBooksTitle>Recommended books</ListRecomendedBooksTitle>
         <ListRecomendedBooksUl>
-            {books.slice(0, 3).map((book) => <ListRecomendedBooksLi key={book._id}>
+            {randomBooks.map((book) => <ListRecomendedBooksLi key={book._id}>
                         <ListRecomendedBooksImg src={book.imageUrl} alt={book.title} width="100"/>
                         <ListRecomendedBooksName>{book.title}</ListRecomendedBooksName>
                         <ListRecomendedBooksWriter>{book.author}</ListRecomendedBooksWriter>

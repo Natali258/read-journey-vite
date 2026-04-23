@@ -36,12 +36,6 @@ export const getOwnBookThunk = createAsyncThunk(
       const { data } = await api.get(
         `books/own`,
       );
-      console.log(data);
-      // const uniqueBooks = Array.from(
-      //   new Map(data.map(book => [book._id, book])).values()
-      // );
-      // console.log(uniqueBooks);
-      // return uniqueBooks;
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
