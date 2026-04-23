@@ -64,5 +64,8 @@ code {
   --blue-line-color: rgba(79, 146, 247, 1);
   --green-color: rgba(48, 185, 77, 1);
   --red-error-color: rgba(233, 5, 22, 1);
+  --red-delete-color: rgba(232, 80, 80, 1);
+  --red-boder-color: rgba(232, 80, 80, 0.2);
+  --red-bground-color: rgba(232, 80, 80, 0.1);
   --modal-background-color: rgba(104, 104, 104, 0.2);
 }

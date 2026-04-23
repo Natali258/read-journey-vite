@@ -37,7 +37,7 @@ export const Pagination = () => {
             <Icon name='icon-left'size={{width: 20, height: 20}}/>
         </PaginationBtn>
         <PaginationBtn onClick={handleNext} disabled={page === totalPages}>
-            <Icon name='icon-right'size={{width: 20, height: 20}} />
+            <Icon name='icon-right' size={{width: 20, height: 20}} />
         </PaginationBtn>
     </PaginationContainerBtn>
   )

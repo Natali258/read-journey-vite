@@ -8,7 +8,6 @@ export const getBooksThunk = createAsyncThunk(
       const { data } = await api.get(
         `books/recommend?page=${page}&limit=${limit}&title=${title}&author=${author}`,
       );
-      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

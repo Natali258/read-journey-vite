@@ -16,6 +16,12 @@ export const MyLibraryBooks = () => {
   useEffect(() => {
     dispatch(getOwnBookThunk());
   }, [dispatch]);
+
+  const handleDelete = id => {
+    console.log(id);
+    
+    // dispatch(removeBook(id));
+  };
   return (
     <MyLibraryBooksContainer>
       <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
@@ -23,7 +29,7 @@ export const MyLibraryBooks = () => {
       {ownerBooks.length > 0 ? (
         <MyLibraryBooksList>
           {ownerBooks.map((book) => (
-            <RecommendedBooksItem key={book._id} book={book} />
+            <RecommendedBooksItem key={book._id} book={book} onDelete={handleDelete}/>
           ))}
         </MyLibraryBooksList>
       ) : (

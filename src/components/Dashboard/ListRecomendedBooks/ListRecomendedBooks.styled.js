@@ -23,12 +23,12 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 `
 export const ListRecomendedBooksLi = s.li`
-// width: 71px;
-// height: 141px;
+width: 71px;
+height: 141px;
 `
 export const ListRecomendedBooksImg = s.img`
 width: 100%;
-// height: 107px;
+height: 107px;
 `
 export const ListRecomendedBooksName = s.p`
 font-family: var(--font-family);
@@ -37,6 +37,9 @@ font-size: 10px;
 line-height: 120%;
 letter-spacing: -0.02em;
 color: var(--main-text-color);
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 `
 export const ListRecomendedBooksWriter = s.p`
 font-family: var(--font-family);
