@@ -12,9 +12,7 @@ export const MyLibraryBooks = () => {
 
   const dispatch = useDispatch();
   const ownerBooks = useSelector(selectOwnBooks);
-  console.log(ownerBooks);
   
-
   useEffect(() => {
     dispatch(getOwnBookThunk());
   }, [dispatch]);
@@ -22,11 +20,20 @@ export const MyLibraryBooks = () => {
     <MyLibraryBooksContainer>
       <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
       <SelectFilter options={options}/>
-      <MyLibraryBooksList>
+      {ownerBooks.length > 0 ? (
+        <MyLibraryBooksList>
+          {ownerBooks.map((book) => (
+            <RecommendedBooksItem key={book._id} book={book} />
+          ))}
+        </MyLibraryBooksList>
+      ) : (
+        <MyLibraryMessage/>
+    )}
+      {/* <MyLibraryBooksList>
         {ownerBooks.map((book) => (
           <RecommendedBooksItem key={book._id} book={book} />
         ))}
-      </MyLibraryBooksList>
+      </MyLibraryBooksList> */}
       {/* <MyLibraryMessage/> */}
     </MyLibraryBooksContainer>
   )
