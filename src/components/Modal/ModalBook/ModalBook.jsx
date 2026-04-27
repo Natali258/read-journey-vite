@@ -1,14 +1,14 @@
 import React from 'react'
 import { ModalBookAuthor, ModalBookBtn, ModalBookContainer, ModalBookImg, ModalBookName, ModalBookPage } from './ModalBook.styled';
 import { useDispatch } from 'react-redux';
-import { addOwnBooksThunc } from '../../../redux/bookSlice/operations';
+import { addOwnBooksThunk } from '../../../redux/bookSlice/operations';
 
 export const ModalBook = ({ book }) => {
   const dispatch = useDispatch();
     console.log(book);
     
     const handleAddToLibrary = () => {
-      dispatch(addOwnBooksThunc(book._id));
+      dispatch(addOwnBooksThunk(book._id));
     }
     
   return (

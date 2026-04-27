@@ -15,12 +15,11 @@ export const getBooksThunk = createAsyncThunk(
   },
 );
 
-export const addOwnBooksThunc = createAsyncThunk(
+export const addOwnBooksThunk = createAsyncThunk(
   "books/addOwnBooks",
   async (id, thunkApi) => {
     try {
       const { data } = await api.post(`books/add/${id}`);
-      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -36,6 +35,20 @@ export const getOwnBookThunk = createAsyncThunk(
         `books/own`,
       );
       return data;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  },
+);
+
+export const removeOwnBooksThunk = createAsyncThunk(
+  "books/removeOwnBooks",
+  async (id, thunkApi) => {
+    try {
+      const { data } = await api.delete(`books/remove/${id}`);
+      console.log(data.id);
+      
+      return data.id;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

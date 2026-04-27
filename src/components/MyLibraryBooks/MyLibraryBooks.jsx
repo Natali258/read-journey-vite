@@ -4,7 +4,7 @@ import { MyLibraryMessage } from '../MyLibraryMessage/MyLibraryMessage'
 import { SelectFilter } from '../SelectFilter/SelectFilter'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectOwnBooks } from '../../redux/bookSlice/BookSlice'
-import { getOwnBookThunk } from '../../redux/bookSlice/operations'
+import { getOwnBookThunk, removeOwnBooksThunk } from '../../redux/bookSlice/operations'
 import { RecommendedBooksItem } from "../RecommendedBooksItem/RecommendedBooksItem";
 
 export const MyLibraryBooks = () => {
@@ -12,7 +12,7 @@ export const MyLibraryBooks = () => {
 
   const dispatch = useDispatch();
   const ownerBooks = useSelector(selectOwnBooks);
-  
+  console.log(ownerBooks);
   useEffect(() => {
     dispatch(getOwnBookThunk());
   }, [dispatch]);
@@ -20,7 +20,7 @@ export const MyLibraryBooks = () => {
   const handleDelete = id => {
     console.log(id);
     
-    // dispatch(removeBook(id));
+    dispatch(removeOwnBooksThunk(id));
   };
   return (
     <MyLibraryBooksContainer>

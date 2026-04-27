@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getBooksThunk, getOwnBookThunk } from "./operations";
+import { getBooksThunk, getOwnBookThunk, removeOwnBooksThunk } from "./operations";
 
 const initialState = {
   recommend: {
@@ -45,6 +45,11 @@ const BookSlice = createSlice({
         state.ownBooks.page = action.payload.page;
         state.ownBooks.totalPages = action.payload.totalPages;
         state.ownBooks.isLoading = false;
+      })
+      .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
+        state.ownBooks.items = state.ownBooks.items.filter(
+        book => book.id !== action.payload
+    ); 
       })
   },
 });
