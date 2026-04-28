@@ -46,9 +46,7 @@ export const removeOwnBooksThunk = createAsyncThunk(
   async (id, thunkApi) => {
     try {
       const { data } = await api.delete(`books/remove/${id}`);
-      console.log(data.id);
-      
-      return data.id;
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

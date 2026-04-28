@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getBooksThunk, getOwnBookThunk, removeOwnBooksThunk } from "./operations";
+import {
+  getBooksThunk,
+  getOwnBookThunk,
+  removeOwnBooksThunk,
+} from "./operations";
 
 const initialState = {
   recommend: {
@@ -13,7 +17,7 @@ const initialState = {
     page: 1,
     totalPages: 1,
     isLoading: false,
-  }
+  },
 };
 
 const BookSlice = createSlice({
@@ -24,7 +28,7 @@ const BookSlice = createSlice({
     selectPage: (state) => state.recommend.page,
     selectTotalPages: (state) => state.recommend.totalPages,
     selectIsLoading: (state) => state.recommend.isLoading,
-    selectOwnBooks: (state) => state.ownBooks.items, 
+    selectOwnBooks: (state) => state.ownBooks.items,
   },
   extraReducers: (builder) => {
     builder
@@ -47,10 +51,14 @@ const BookSlice = createSlice({
         state.ownBooks.isLoading = false;
       })
       .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
+        console.log("BEFORE", state.ownBooks.items.length);
+
         state.ownBooks.items = state.ownBooks.items.filter(
-        book => book.id !== action.payload
-    ); 
-      })
+          (book) => book._id !== action.payload.id,
+        );
+
+        console.log("AFTER", state.ownBooks.items.length);
+      });
   },
 });
 
@@ -59,5 +67,6 @@ export const {
   selectBooks,
   selectPage,
   selectTotalPages,
-  selectIsLoading, selectOwnBooks,
+  selectIsLoading,
+  selectOwnBooks,
 } = BookSlice.selectors;
