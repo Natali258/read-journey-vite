@@ -51,13 +51,9 @@ const BookSlice = createSlice({
         state.ownBooks.isLoading = false;
       })
       .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
-        console.log("BEFORE", state.ownBooks.items.length);
-
         state.ownBooks.items = state.ownBooks.items.filter(
           (book) => book._id !== action.payload.id,
         );
-
-        console.log("AFTER", state.ownBooks.items.length);
       });
   },
 });

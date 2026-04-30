@@ -18,8 +18,6 @@ export const MyLibraryBooks = () => {
   }, [dispatch]);
 
   const handleDelete = id => {
-    console.log(id);
-    
     dispatch(removeOwnBooksThunk(id));
   };
   return (
@@ -32,15 +30,9 @@ export const MyLibraryBooks = () => {
             <RecommendedBooksItem key={book._id} book={book} onDelete={handleDelete}/>
           ))}
         </MyLibraryBooksList>
-      ) : (
+        ) : (
         <MyLibraryMessage/>
-    )}
-      {/* <MyLibraryBooksList>
-        {ownerBooks.map((book) => (
-          <RecommendedBooksItem key={book._id} book={book} />
-        ))}
-      </MyLibraryBooksList> */}
-      {/* <MyLibraryMessage/> */}
+      )}
     </MyLibraryBooksContainer>
   )
 }

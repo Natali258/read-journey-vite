@@ -41,6 +41,7 @@ export const SelectFilterList = s.ul`
 
 export const SelectFilterListItem = s.li`
     margin-bottom: 7px;
+    cursor: pointer;
     &:last-child { margin-bottom: 0; }
 
   &:hover {

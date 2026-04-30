@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import s from 'styled-components';
 
 export const ModalBookContainer = s.div`
@@ -62,4 +63,21 @@ color: var(--main-text-color);
     color: var(--body-background-color);
 }`
 
-;
+export const ModalBookNavLink = s(NavLink)`
+margin-top: 32px;
+border: 1px solid var(--border-color);
+border-radius: 30px;
+padding: 14px 28px;
+background-color: var(--container-background-color);
+text-decoration: none;
+font-family: var(--font-family);
+font-weight: 700;
+font-size: 16px;
+line-height: 113%;
+letter-spacing: 0.02em;
+color: var(--main-text-color);
+
+&:hover {
+    background-color: var(--main-text-color);
+    color: var(--body-background-color);
+}`
