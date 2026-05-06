@@ -53,7 +53,7 @@ const BookSlice = createSlice({
       .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
         state.ownBooks.items = state.ownBooks.items.filter(
           (book) => book._id !== action.payload.id,
-        );
+        ); 
       });
   },
 });

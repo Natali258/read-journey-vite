@@ -30,6 +30,7 @@ padding: 16px 14px;
 background-color: var(--select-background-color);
 border-radius: 12px;
 border: none;
+color: var(--main-text-color);
 
 &:hover, &:focus-visible {
     outline: none;

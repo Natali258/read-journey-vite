@@ -11,7 +11,6 @@ export const ListRecomendedBooks = () => {
     const randomBooks = useMemo(() => {
         return [...books].sort(() => 0.5 - Math.random()).slice(0, 3);
     }, [books]);
-    console.log(randomBooks); 
 
     
   return (

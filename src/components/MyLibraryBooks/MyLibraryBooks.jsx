@@ -12,7 +12,6 @@ export const MyLibraryBooks = () => {
 
   const dispatch = useDispatch();
   const ownerBooks = useSelector(selectOwnBooks);
-  console.log(ownerBooks);
   useEffect(() => {
     dispatch(getOwnBookThunk());
   }, [dispatch]);
