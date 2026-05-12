@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
+  addNewBooksThunk,
   getBooksThunk,
   getOwnBookThunk,
   removeOwnBooksThunk,
@@ -44,6 +45,11 @@ const BookSlice = createSlice({
       .addCase(getBooksThunk.rejected, (state) => {
         state.recommend.isLoading = false;
       })
+      // .addCase(addNewBooksThunk.fulfilled, (state, action) => {
+      //   console.log(action);
+        
+      //   state.ownBooks.items = action.payload;
+      // })
       .addCase(getOwnBookThunk.fulfilled, (state, action) => {
         state.ownBooks.items = action.payload;
         state.ownBooks.page = action.payload.page;

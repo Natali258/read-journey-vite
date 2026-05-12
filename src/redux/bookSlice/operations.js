@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { api } from "../../axiosConfig/api";
+import { toast } from "react-toastify";
 
 export const getBooksThunk = createAsyncThunk(
   "books/getBooks",
@@ -17,23 +18,24 @@ export const getBooksThunk = createAsyncThunk(
 
 export const addNewBooksThunk = createAsyncThunk(
   "books/addNewBooks",
-  async (credentials, thunkApi) => {
+  async (credentials) => {
+    console.log(credentials);
     try {
-      const { data } = await api.post(`books/add`, credentials);
+      const {data} = await api.post(`books/add`, credentials);
       console.log(data);
-      
       return data;
-    } catch (error) {
-      return thunkApi.rejectWithValue(error.message);
+    } catch {
+      toast.error('Something went wrong.')
     }
   },
-);
+); 
 
 export const addOwnBooksThunk = createAsyncThunk(
   "books/addOwnBooks",
   async (id, thunkApi) => {
     try {
       const { data } = await api.post(`books/add/${id}`);
+      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

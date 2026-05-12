@@ -28,7 +28,7 @@ export const AddBook = () => {
       <AddBookForm action="" onSubmit={handleSubmit(submit)}>
         <AddBookInput type="text" placeholder="Book title:" {...register('title')}/>
         <AddBookInput type="text" placeholder="The author:" {...register('author')}/>
-        <AddBookInput type="text" placeholder="Number of pages:" {...register('pages')}/>
+        <AddBookInput type="text" placeholder="Number of pages:" {...register('totalPages')}/>
         <AddBookBtn
           type="submit"
         >
