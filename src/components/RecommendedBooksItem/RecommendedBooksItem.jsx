@@ -3,6 +3,7 @@ import { RecommendedBookBox, RecommendedBooksDltBtn, RecommendedBooksName, Recom
 import { useModal } from '../Modal/ModalContext';
 import { ModalBook } from '../Modal/ModalBook/ModalBook';
 import Icon from '../Icon/Icon';
+import placeholderBook from '../../assets/img/add-book.png'
 
 
 
@@ -12,7 +13,7 @@ export const RecommendedBooksItem = ({ book, onDelete }) => {
   return (
     <RecommendedItem key={book._id}>
       <RecommendedBtnImg onClick={() => openModal(<ModalBook book={book}/>)}>
-        <RecommendedImg src={book.imageUrl} alt={book.title} width="100"/>
+        <RecommendedImg src={book.imageUrl || placeholderBook} alt={book.title} width="100"/>
       </RecommendedBtnImg>
       <RecommendedBookBox>
         <RecommendedBooksName>{book.title}</RecommendedBooksName>
