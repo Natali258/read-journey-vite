@@ -22,7 +22,7 @@ export const ModalBox = s.div`
   border-radius: 12px;
   padding: 50px;
   max-width: 500px;
-  width: 100%;
+  // width: 100%;
   // width: 500px;
   // height: 483px;
 `;

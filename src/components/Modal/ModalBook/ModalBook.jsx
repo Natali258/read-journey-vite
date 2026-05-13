@@ -10,7 +10,8 @@ import {
 } from "./ModalBook.styled";
 import { useDispatch } from "react-redux";
 import { addOwnBooksThunk } from "../../../redux/bookSlice/operations";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import placeholderBook from "../../../assets/img/add-book.png";
 
 export const ModalBook = ({ book }) => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export const ModalBook = ({ book }) => {
 
   return (
     <ModalBookContainer>
-      <ModalBookImg src={book.imageUrl} alt={book.title} />
+      <ModalBookImg src={book.imageUrl || placeholderBook} alt={book.title} />
       <ModalBookName>{book.title}</ModalBookName>
       <ModalBookAuthor>{book.author}</ModalBookAuthor>
       <ModalBookPage>{book.totalPages} pages</ModalBookPage>
