@@ -68,3 +68,16 @@ export const removeOwnBooksThunk = createAsyncThunk(
     }
   },
 );
+
+export const getInfoBookThunk = createAsyncThunk(
+  "books/getInfoBook",
+  async (id) => {
+    try {
+      const { data } = await api.get(`books/${id}`);
+      console.log(data);
+      return data;
+    } catch {
+      toast.error('Something went wrong.')
+    }
+  },
+);

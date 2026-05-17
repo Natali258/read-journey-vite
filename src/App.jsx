@@ -37,7 +37,7 @@ function App() {
         <Route element={<MainLayout/>}>
           <Route path="/recommended" element={<PrivateRoute><RecommendedPage/></PrivateRoute>}></Route>
           <Route path="/library" element={<PrivateRoute><LibraryPage/></PrivateRoute>}></Route>
-          <Route path="/reading:bookId" element={<PrivateRoute><ReadingPage/></PrivateRoute>}></Route>
+          <Route path="/reading/:id" element={<PrivateRoute><ReadingPage/></PrivateRoute>}></Route>
         </Route>
       </Routes>
       <ToastContainer />

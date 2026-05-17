@@ -10,7 +10,6 @@ import {
 } from "./ModalBook.styled";
 import { useDispatch } from "react-redux";
 import { addOwnBooksThunk } from "../../../redux/bookSlice/operations";
-// import { useNavigate } from "react-router-dom";
 import placeholderBook from "../../../assets/img/add-book.png";
 
 export const ModalBook = ({ book }) => {
@@ -19,12 +18,6 @@ export const ModalBook = ({ book }) => {
   const handleAddToLibrary = () => {
     dispatch(addOwnBooksThunk(book._id));
   };
-
-//   const navigate = useNavigate();
-
-// const handleStartReading = () => {
-//   navigate(`/reading/${book._id}`);
-// };
 
   return (
     <ModalBookContainer>

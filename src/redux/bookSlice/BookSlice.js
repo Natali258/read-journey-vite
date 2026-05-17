@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   addNewBooksThunk,
   getBooksThunk,
+  getInfoBookThunk,
   getOwnBookThunk,
   removeOwnBooksThunk,
 } from "./operations";
@@ -19,6 +20,7 @@ const initialState = {
     totalPages: 1,
     isLoading: false,
   },
+  readingBook: null,
 };
 
 const BookSlice = createSlice({
@@ -30,6 +32,7 @@ const BookSlice = createSlice({
     selectTotalPages: (state) => state.recommend.totalPages,
     selectIsLoading: (state) => state.recommend.isLoading,
     selectOwnBooks: (state) => state.ownBooks.items,
+    selectReadingBook: (state) => state.readingBook,
   },
   extraReducers: (builder) => {
     builder
@@ -56,9 +59,11 @@ const BookSlice = createSlice({
       })
       .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
         state.ownBooks.items = state.ownBooks.items.filter(
-          (book) => book._id !== action.payload.id,
-        ); 
-      });
+          (book) => book._id !== action.payload.id); 
+      })
+      .addCase(getInfoBookThunk.fulfilled, (state, action) => {
+        state.readingBook = action.payload;
+      })
   },
 });
 
@@ -69,4 +74,5 @@ export const {
   selectTotalPages,
   selectIsLoading,
   selectOwnBooks,
+  selectReadingBook
 } = BookSlice.selectors;

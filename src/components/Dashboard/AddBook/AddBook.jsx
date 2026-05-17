@@ -7,7 +7,6 @@ import {
   AddBookTitle,
 } from "./AddBook.styled";
 import { useModal } from "../../Modal/ModalContext";
-// import { ModalBookIsRead } from "../../Modal/ModalBookIsRead/ModalBookIsRead";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { addNewBooksThunk } from "../../../redux/bookSlice/operations";
