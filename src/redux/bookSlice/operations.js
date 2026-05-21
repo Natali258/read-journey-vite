@@ -81,12 +81,11 @@ export const getInfoBookThunk = createAsyncThunk(
   },
 );
 
-export const booksReadingStartThunk = createAsyncThunk(
-  "books/postBooksReadingStart",
+export const startBooksReadingThunk = createAsyncThunk(
+  "books/startBooksReading",
   async credentials => {
     try {
       const { data } = await api.post(`books/reading/start`, credentials);
-      console.log(data);
       return data;
     } catch {
       toast.error('Something went wrong.')
@@ -94,11 +93,11 @@ export const booksReadingStartThunk = createAsyncThunk(
   },
 );
 
-export const booksReadingFinishThunk = createAsyncThunk(
-  "books/postBooksReadingFinish",
-  async (id) => {
+export const finishBooksReadingThunk = createAsyncThunk(
+  "books/finishBooksReading",
+  async credentials => {
     try {
-      const { data } = await api.post(`books/reading/finish/${id}`);
+      const { data } = await api.post(`books/reading/finish`, credentials);
       console.log(data);
       return data;
     } catch {
