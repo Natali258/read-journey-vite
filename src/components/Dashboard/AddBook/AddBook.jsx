@@ -12,8 +12,6 @@ import { useDispatch } from "react-redux";
 import { addNewBooksThunk } from "../../../redux/bookSlice/operations";
 import { ModalGoodJob } from "../../Modal/ModalGoodJob/ModalGoodJob";
 
-
-
 export const AddBook = () => {
   const dispatch = useDispatch();
   const { openModal } = useModal();

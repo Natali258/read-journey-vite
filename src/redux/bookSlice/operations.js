@@ -80,3 +80,29 @@ export const getInfoBookThunk = createAsyncThunk(
     }
   },
 );
+
+export const booksReadingStartThunk = createAsyncThunk(
+  "books/postBooksReadingStart",
+  async credentials => {
+    try {
+      const { data } = await api.post(`books/reading/start`, credentials);
+      console.log(data);
+      return data;
+    } catch {
+      toast.error('Something went wrong.')
+    }
+  },
+);
+
+export const booksReadingFinishThunk = createAsyncThunk(
+  "books/postBooksReadingFinish",
+  async (id) => {
+    try {
+      const { data } = await api.post(`books/reading/finish/${id}`);
+      console.log(data);
+      return data;
+    } catch {
+      toast.error('Something went wrong.')
+    }
+  },
+);

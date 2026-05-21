@@ -7,10 +7,10 @@ import placeholderBook from "../../assets/img/add-book.png";
 export const MyBook = () => {
  const readingBook = useSelector(selectReadingBook);
  console.log(readingBook);
+ 
  if (!readingBook) {
   return <p>Loading...</p>;
 }
- 
  
   return (
     <MyBookContainer>

@@ -20,7 +20,9 @@ const initialState = {
     totalPages: 1,
     isLoading: false,
   },
-  readingBook: null,
+  readingBook: {
+    items: [],
+  },
 };
 
 const BookSlice = createSlice({
@@ -32,7 +34,7 @@ const BookSlice = createSlice({
     selectTotalPages: (state) => state.recommend.totalPages,
     selectIsLoading: (state) => state.recommend.isLoading,
     selectOwnBooks: (state) => state.ownBooks.items,
-    selectReadingBook: (state) => state.readingBook,
+    selectReadingBook: (state) => state.readingBook.items,
   },
   extraReducers: (builder) => {
     builder
@@ -62,7 +64,7 @@ const BookSlice = createSlice({
           (book) => book._id !== action.payload.id); 
       })
       .addCase(getInfoBookThunk.fulfilled, (state, action) => {
-        state.readingBook = action.payload;
+        state.readingBook.items = action.payload;
       })
   },
 });
