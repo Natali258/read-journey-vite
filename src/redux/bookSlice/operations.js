@@ -98,7 +98,6 @@ export const finishBooksReadingThunk = createAsyncThunk(
   async credentials => {
     try {
       const { data } = await api.post(`books/reading/finish`, credentials);
-      console.log(data);
       return data;
     } catch {
       toast.error('Something went wrong.')

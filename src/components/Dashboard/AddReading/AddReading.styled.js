@@ -29,7 +29,18 @@ color: var(--main-text-color);
 &:hover, &:focus-visible {
     outline: none;
     border: 1px solid var(--border-color);
-}`
+}
+ /* 🔥 прибрати стрілочки */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+`
 
 export const AddReadingBtn = s.button`
 padding: 12px 28px;
