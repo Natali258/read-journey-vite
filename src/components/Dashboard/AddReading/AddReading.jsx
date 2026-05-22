@@ -31,7 +31,7 @@ export const AddReading = () => {
   
   return (
     <div>
-      <AddReadingTitle>Start page:</AddReadingTitle>
+      <AddReadingTitle>{isReading ? 'Stop page:' : 'Start page:'}</AddReadingTitle>
       <AddReadingForm action="" onSubmit={handleSubmit(onSubmit)}>
         <AddReadingInput type="number" placeholder='Page number:' {...register("page", { valueAsNumber: true })} />
         <AddReadingBtn type='submit'>{isReading ? 'To finish' : 'To start'}</AddReadingBtn>
