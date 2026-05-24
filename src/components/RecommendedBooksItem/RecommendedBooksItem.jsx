@@ -20,7 +20,7 @@ export const RecommendedBooksItem = ({ book, onDelete }) => {
         <RecommendedBooksWriter>{book.author}</RecommendedBooksWriter>
       </RecommendedBookBox>
       {onDelete && (<RecommendedBooksDltBtn type='button' onClick={() => onDelete(book._id)}>
-        <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--red-delete-color)'/>
+        <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
       </RecommendedBooksDltBtn>)}
     </RecommendedItem>
   )
