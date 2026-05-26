@@ -1,8 +1,15 @@
 import React from "react";
 import Icon from "../../Icon/Icon";
 import { DiaryHeaderContainer, DiaryIconContainer, DiaryTitle, DiaryUl } from "./Diary.styled";
+import { DiaryItem } from "../DiaryItem/DiaryItem";
+import { selectReadingBook } from "../../../redux/bookSlice/BookSlice";
+import { useSelector } from "react-redux";
+
 
 export const Diary = () => {
+  const readingBook = useSelector(selectReadingBook)
+  const progressBook = readingBook.progress;
+  console.log(readingBook);
   return (
     <div>
       <DiaryHeaderContainer>
@@ -21,8 +28,10 @@ export const Diary = () => {
             />
         </DiaryIconContainer>
       </DiaryHeaderContainer>
-      <DiaryUl>11111
-        {/* <DiaryItem /> */}
+      <DiaryUl>
+        {progressBook.map((item, index) => (
+          <DiaryItem key={index} progress={item} />
+        ))}
       </DiaryUl>
     </div>
   );
