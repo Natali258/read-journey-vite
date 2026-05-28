@@ -1,10 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   addNewBooksThunk,
+  deleteReadingThunk,
   getBooksThunk,
   getInfoBookThunk,
   getOwnBookThunk,
   removeOwnBooksThunk,
+  startBooksReadingThunk,
+  finishBooksReadingThunk,
 } from "./operations";
 
 const initialState = {
@@ -66,6 +69,17 @@ const BookSlice = createSlice({
       .addCase(getInfoBookThunk.fulfilled, (state, action) => {
         state.readingBook.items = action.payload;
       })
+      .addCase(startBooksReadingThunk.fulfilled, (state, action) => {
+        state.readingBook.items = action.payload;
+      })
+      .addCase(finishBooksReadingThunk.fulfilled, (state, action) => {
+        state.readingBook.items = action.payload;
+      })
+      .addCase(deleteReadingThunk.fulfilled, (state, action) => {
+        console.log(state);
+        console.log(action);
+        
+      });
   },
 });
 

@@ -1,12 +1,14 @@
 import React from 'react'
 import Icon from '../../Icon/Icon';
 import progressBlock from '../../../assets/img/block.png'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectReadingBook } from '../../../redux/bookSlice/BookSlice';
 import { DiaryBtn, DiaryContainerData, DiaryContainerLi, DiaryContainerPage, DiaryData, DiaryIcon, DiaryMinutes, DiaryPages, DiaryPercent, DiaryPerPages } from './DiaryItem.styled';
+import { deleteReadingThunk } from '../../../redux/bookSlice/operations';
 
 
 export const DiaryItem = ({ progress }) => {
+  const dispatch = useDispatch();
   const readingBook = useSelector(selectReadingBook)
   console.log(progress);
   const startDate = new Date(progress.startReading);
@@ -14,12 +16,14 @@ export const DiaryItem = ({ progress }) => {
   const formatted = startDate.toLocaleDateString("uk-UA");
   const timeDiff = finishDate - startDate;
   const minutes = Math.round(timeDiff / (1000 * 60));
-
   const pagesRead = progress.finishPage - progress.startPage;
-
   const percent = Math.round(
     (pagesRead / readingBook.totalPages) * 100
   );
+ const handleDeleteProgress = (id) => {
+  console.log(id);
+  dispatch(deleteReadingThunk({ id }));
+ }
   
   return (
     <DiaryContainerLi>
@@ -36,7 +40,7 @@ export const DiaryItem = ({ progress }) => {
         <div><img src={progressBlock} alt="progress" /></div>
         <DiaryPerPages>{progress.speed} pages <br/> per hour</DiaryPerPages>
       </DiaryContainerPage>
-      <DiaryBtn>
+      <DiaryBtn onClick={() => handleDeleteProgress(progress._id)}>
         <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
       </DiaryBtn>
     </DiaryContainerLi>
