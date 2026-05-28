@@ -48,6 +48,10 @@ button {
   padding: 0;
 }
 
+svg {
+  display: block;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

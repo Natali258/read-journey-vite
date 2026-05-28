@@ -21,6 +21,7 @@ export const DiaryIconContainer = s.div`
 `
 export const DiaryUl = s.ul`
   display: flex;
+  flex-direction: column;
   gap: 22px;
   border-radius: 12px;
   background-color: var(--select-background-color);
