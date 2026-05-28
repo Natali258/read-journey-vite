@@ -7,10 +7,9 @@ import { DiaryBtn, DiaryContainerData, DiaryContainerLi, DiaryContainerPage, Dia
 import { deleteReadingThunk } from '../../../redux/bookSlice/operations';
 
 
-export const DiaryItem = ({ progress }) => {
+export const DiaryItem = ({ progress, book }) => {
   const dispatch = useDispatch();
   const readingBook = useSelector(selectReadingBook)
-  console.log(progress);
   const startDate = new Date(progress.startReading);
   const finishDate = new Date(progress.finishReading);
   const formatted = startDate.toLocaleDateString("uk-UA");
@@ -20,9 +19,11 @@ export const DiaryItem = ({ progress }) => {
   const percent = Math.round(
     (pagesRead / readingBook.totalPages) * 100
   );
- const handleDeleteProgress = (id) => {
-  console.log(id);
-  dispatch(deleteReadingThunk({ id }));
+ const handleDeleteProgress = (readingId) => {
+  dispatch(deleteReadingThunk({
+      bookId: book._id,
+      readingId,
+    }));
  }
   
   return (

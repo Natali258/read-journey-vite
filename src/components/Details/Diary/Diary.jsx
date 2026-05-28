@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 export const Diary = () => {
   const readingBook = useSelector(selectReadingBook)
   const progressBook = readingBook?.progress || [];
-  console.log(readingBook);
   return (
     <div>
       <DiaryHeaderContainer>
@@ -30,7 +29,7 @@ export const Diary = () => {
       </DiaryHeaderContainer>
       <DiaryUl>
         {progressBook?.map((item, index) => (
-          <DiaryItem key={index} progress={item} />
+          <DiaryItem key={index} progress={item} book={readingBook} />
         ))}
       </DiaryUl>
     </div>

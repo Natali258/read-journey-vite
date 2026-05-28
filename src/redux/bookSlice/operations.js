@@ -107,9 +107,17 @@ export const finishBooksReadingThunk = createAsyncThunk(
 
 export const deleteReadingThunk = createAsyncThunk(
   "books/deleteReading",
-  async ({ id }) => {
+  async ({ bookId, readingId }) => {
     try {
-      const { data } = await api.delete(`books/reading/${id}`);
+      const { data } = await api.delete(`books/reading`,
+        {
+          params: {
+            bookId,
+            readingId,
+          },
+      });
+      console.log(data);
+      
       return data;
     } catch {
       toast.error('Something went wrong.')
