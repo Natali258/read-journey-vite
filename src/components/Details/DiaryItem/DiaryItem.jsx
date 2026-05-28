@@ -21,7 +21,6 @@ export const DiaryItem = ({ progress }) => {
     (pagesRead / readingBook.totalPages) * 100
   );
   
-  
   return (
     <DiaryContainerLi>
       <DiaryIcon>
@@ -41,27 +40,6 @@ export const DiaryItem = ({ progress }) => {
         <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
       </DiaryBtn>
     </DiaryContainerLi>
-    //  <DiaryContainerLi>
-    //   <div>
-    //     <DiaryIcon>
-    //       <Icon name = 'icon-block-diary' color="var(--main-text-color)" size={{ width: 20, height: 20 }} />
-    //     </DiaryIcon>
-    //     <DiaryContainerData>
-    //       <DiaryData>{formatted}</DiaryData>
-    //       <DiaryPercent>{percent}%</DiaryPercent>
-    //       <DiaryMinutes>{minutes} minutes</DiaryMinutes>
-    //     </DiaryContainerData>
-    //   </div>
-    //   <DiaryContainer2>
-    //     <DiaryContainerPage>
-    //       <DiaryPages>{pagesRead} pages</DiaryPages>
-    //       <div><img src={progressBlock} alt="progress" /></div>
-    //       <DiaryPerPages>{progress.speed} pages <br /> per hour</DiaryPerPages>
-    //     </DiaryContainerPage>
-    //     <div>
-    //       <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
-    //     </div>
-    //   </DiaryContainer2>
-    // </DiaryContainerLi>
+    
   )
 }

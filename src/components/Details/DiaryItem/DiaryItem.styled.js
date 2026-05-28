@@ -2,12 +2,7 @@ import s from 'styled-components'
 
 export const DiaryContainerLi = s.li`
     display: flex;
-    align-items: flex-start;
 `
-// export const DiaryContainer1 = s.div`
-//     display: block;
-//     // margin-right: 86px;
-// `
 export const DiaryIcon = s.div`
     display: inline-block;
     margin-right: 10px;
@@ -42,10 +37,6 @@ export const DiaryMinutes = s.div`
     letter-spacing: -0.02em;
     color: var(--grey-text-color);
 `
-// export const DiaryContainer2 = s.div`
-//     display: block;
-//     margin-left: auto;
-// `
 export const DiaryContainerPage = s.div`
     display: inline-block;
     wirdth: 59px;
@@ -70,6 +61,6 @@ export const DiaryPerPages = s.div`
     color: var(--grey-text-color);
     margin-top: 7px;
 `
-export const DiaryBtn = s.div`
+export const DiaryBtn = s.button`
     text-align: center;
 `
