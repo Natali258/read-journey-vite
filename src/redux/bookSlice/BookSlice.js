@@ -78,9 +78,6 @@ const BookSlice = createSlice({
       .addCase(deleteReadingThunk.fulfilled, (state, action) => {
         console.log(action);
         state.readingBook.items = action.payload;
-        
-        // state.readingBook.progress = state.readingBook.progress.filter(
-        //   (item) => item._id !== action.payload.readingId);
     });
   },
 });
