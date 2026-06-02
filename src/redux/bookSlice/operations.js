@@ -19,7 +19,6 @@ export const getBooksThunk = createAsyncThunk(
 export const addNewBooksThunk = createAsyncThunk(
   "books/addNewBooks",
   async (credentials) => {
-    console.log(credentials);
     try {
       const {data} = await api.post(`books/add`, credentials);
       console.log(data);
@@ -45,12 +44,27 @@ export const addOwnBooksThunk = createAsyncThunk(
 
 export const getOwnBookThunk = createAsyncThunk(
   "books/getOwnBook",
-  async (_, thunkApi) => {
+  async (credentials, thunkApi) => {
     try {
       const { data } = await api.get(
-        `books/own`,
+        `books/own`, credentials
       );
-      return data;
+      const resalt = data.filter((item) => {
+        switch (credentials) {
+          case 'Unread':
+            return item.status === 'unread';
+          case 'In progress':
+            return item.status === 'in-progress';
+          case 'Done':
+            return item.status === 'done';
+          case 'All books':
+            return true;
+          default:
+            return true;
+          }
+
+      })
+      return resalt;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

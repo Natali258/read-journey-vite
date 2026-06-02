@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SelectFilterArrow, SelectFilterContainer, SelectFilterList, SelectFilterListItem } from './SelectFilter.styled'
 import Icon from '../Icon/Icon'
+import { useDispatch } from 'react-redux';
+import { getOwnBookThunk } from '../../redux/bookSlice/operations';
 
 export const SelectFilter = ({ options, placeholder = "All books" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-
+  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getOwnBookThunk(selectedOption));
+  }, [selectedOption, dispatch]);
   const toggling = () => setIsOpen(!isOpen);
 
   const onOptionClicked = (value) => () => {
     setSelectedOption(value);
     setIsOpen(false);
-    console.log("Вибрано:", value);
   };
   return (
     <SelectFilterContainer onClick={toggling}>{selectedOption || placeholder}

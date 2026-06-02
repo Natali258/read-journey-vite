@@ -89,5 +89,5 @@ export const {
   selectTotalPages,
   selectIsLoading,
   selectOwnBooks,
-  selectReadingBook
+  selectReadingBook,
 } = BookSlice.selectors;
