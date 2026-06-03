@@ -19,8 +19,7 @@ const initialState = {
   },
   ownBooks: {
     items: [],
-    page: 1,
-    totalPages: 1,
+    status: 'All books',
     isLoading: false,
   },
   readingBook: {
@@ -38,6 +37,7 @@ const BookSlice = createSlice({
     selectIsLoading: (state) => state.recommend.isLoading,
     selectOwnBooks: (state) => state.ownBooks.items,
     selectReadingBook: (state) => state.readingBook.items,
+    selectStatus: (state) => state.ownBooks.status,
   },
   extraReducers: (builder) => {
     builder
@@ -57,9 +57,10 @@ const BookSlice = createSlice({
         state.ownBooks.items.push(action.payload);
       })
       .addCase(getOwnBookThunk.fulfilled, (state, action) => {
+        console.log(action.payload.status);
+        
         state.ownBooks.items = action.payload;
-        state.ownBooks.page = action.payload.page;
-        state.ownBooks.totalPages = action.payload.totalPages;
+        state.ownBooks.status = action.payload.status;
         state.ownBooks.isLoading = false;
       })
       .addCase(removeOwnBooksThunk.fulfilled, (state, action) => {
@@ -90,4 +91,5 @@ export const {
   selectIsLoading,
   selectOwnBooks,
   selectReadingBook,
+  selectStatus
 } = BookSlice.selectors;

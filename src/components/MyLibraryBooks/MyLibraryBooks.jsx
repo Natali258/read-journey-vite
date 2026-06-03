@@ -8,10 +8,16 @@ import { getOwnBookThunk, removeOwnBooksThunk } from '../../redux/bookSlice/oper
 import { RecommendedBooksItem } from "../RecommendedBooksItem/RecommendedBooksItem";
 
 export const MyLibraryBooks = () => {
-  const options = [ "Unread", "In progress", "Done", "All books",];
+  const options = [
+    { label: "Unread", value: "unread" },
+    { label: "In progress", value: "in-progress" },
+    { label: "Done", value: "done" },
+    { label: "All books", value: "" }, 
+  ];
 
   const dispatch = useDispatch();
   const ownerBooks = useSelector(selectOwnBooks);
+  console.log(ownerBooks);
   
   useEffect(() => {
     dispatch(getOwnBookThunk());

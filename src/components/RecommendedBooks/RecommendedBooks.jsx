@@ -16,7 +16,7 @@ export const RecommendedBooks = () => {
   const books = useSelector(selectBooks);
   const page = useSelector(selectPage);
   const filter = useSelector(selectSearchFilter);
-
+  
   useEffect(() => {
     dispatch(getBooksThunk({ page, limit: 10, ...filter }));
   }, [dispatch, page]);

@@ -44,27 +44,16 @@ export const addOwnBooksThunk = createAsyncThunk(
 
 export const getOwnBookThunk = createAsyncThunk(
   "books/getOwnBook",
-  async (credentials, thunkApi) => {
+  async (status, thunkApi) => {
+    console.log(status);
+    
     try {
       const { data } = await api.get(
-        `books/own`, credentials
-      );
-      const resalt = data.filter((item) => {
-        switch (credentials) {
-          case 'Unread':
-            return item.status === 'unread';
-          case 'In progress':
-            return item.status === 'in-progress';
-          case 'Done':
-            return item.status === 'done';
-          case 'All books':
-            return true;
-          default:
-            return true;
-          }
-
-      })
-      return resalt;
+        `books/own`, {
+      params: status ? { status } : {},
+    }
+      ); 
+      return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
     }

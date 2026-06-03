@@ -10,7 +10,7 @@ export const SelectFilter = ({ options, placeholder = "All books" }) => {
   
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getOwnBookThunk(selectedOption));
+    dispatch(getOwnBookThunk(selectedOption?.value || undefined));
   }, [selectedOption, dispatch]);
   const toggling = () => setIsOpen(!isOpen);
 
@@ -19,13 +19,13 @@ export const SelectFilter = ({ options, placeholder = "All books" }) => {
     setIsOpen(false);
   };
   return (
-    <SelectFilterContainer onClick={toggling}>{selectedOption || placeholder}
+    <SelectFilterContainer onClick={toggling}>{selectedOption?.label || placeholder}
       <SelectFilterArrow $isOpen={isOpen}>
         <Icon name="icon-chevron-down" size={{width:16, height:16}} color="var(--main-text-color)"/>
       </SelectFilterArrow>
       {isOpen && (<SelectFilterList>{options.map((option) => (
-        <SelectFilterListItem  onClick={onOptionClicked(option)}>
-          {option}
+        <SelectFilterListItem key={option.value}  onClick={onOptionClicked(option)}>
+          {option.label}
         </SelectFilterListItem>
       ))}</SelectFilterList>)}
     </SelectFilterContainer>
