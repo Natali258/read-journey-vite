@@ -9,6 +9,8 @@ export const AddReading = () => {
   const [isReading, setIsReading] = useState(false);
    const {register, handleSubmit, setValue} = useForm()
    const book = useSelector(selectReadingBook);
+   console.log(book);
+   
     const dispatch = useDispatch()
    
     const onSubmit = (data) => {

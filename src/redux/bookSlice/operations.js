@@ -21,7 +21,6 @@ export const addNewBooksThunk = createAsyncThunk(
   async (credentials) => {
     try {
       const {data} = await api.post(`books/add`, credentials);
-      console.log(data);
       return data;
     } catch {
       toast.error('Something went wrong.')
@@ -34,7 +33,6 @@ export const addOwnBooksThunk = createAsyncThunk(
   async (id, thunkApi) => {
     try {
       const { data } = await api.post(`books/add/${id}`);
-      console.log(data);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
@@ -117,8 +115,6 @@ export const deleteReadingThunk = createAsyncThunk(
             readingId,
           },
       });
-      console.log(data);
-      
       return data;
     } catch {
       toast.error('Something went wrong.')

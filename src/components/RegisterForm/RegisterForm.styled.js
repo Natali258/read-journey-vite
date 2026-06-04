@@ -47,7 +47,7 @@ export const StlInputRegister = styled.input`
 padding: 16px 14px 16px 14px;
 border-radius: 12px;
 background-color: var(--select-background-color);
-border: none;
+border: 1px solid transparent;
 color: var(--main-text-color);
 
 &:hover, &:focus-visible {
