@@ -45,8 +45,6 @@ export const addOwnBooksThunk = createAsyncThunk(
 export const getOwnBookThunk = createAsyncThunk(
   "books/getOwnBook",
   async (status, thunkApi) => {
-    console.log(status);
-    
     try {
       const { data } = await api.get(
         `books/own`, {

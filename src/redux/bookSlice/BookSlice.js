@@ -57,8 +57,6 @@ const BookSlice = createSlice({
         state.ownBooks.items.push(action.payload);
       })
       .addCase(getOwnBookThunk.fulfilled, (state, action) => {
-        console.log(action.payload.status);
-        
         state.ownBooks.items = action.payload;
         state.ownBooks.status = action.payload.status;
         state.ownBooks.isLoading = false;
