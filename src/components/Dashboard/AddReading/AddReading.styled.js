@@ -23,7 +23,7 @@ box-sizing: border-box;
 padding: 16px 14px;
 background-color: var(--select-background-color);
 border-radius: 12px;
-border: none;
+border: 1px solid transparent;
 color: var(--main-text-color);
 
 &:hover, &:focus-visible {
