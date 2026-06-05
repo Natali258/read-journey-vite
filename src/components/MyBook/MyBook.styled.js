@@ -59,6 +59,17 @@ export const IconButton = s.button`
   &:hover {
     transform: scale(1.08);
   }
+
+    ${({ $active }) =>
+    $active &&
+    `
+      ${Inner} {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        transform: scale(1.15) rotate(90deg);
+      }
+    `}
 `;
 
 export const Inner = s.div`
@@ -68,12 +79,4 @@ export const Inner = s.div`
   border-radius: 50%;
   transition: transform 200ms ease;
   text-align: center;
-
-  ${IconButton}:focus & {
-    width: 18px;
-    height: 18px;
-    background: #ff0000;
-    border-radius: 4px;
-    transform: scale(1.15) rotate(90deg);
-  }
 `;

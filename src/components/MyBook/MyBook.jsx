@@ -1,16 +1,28 @@
-import React from 'react'
-import { IconButton, Inner, MyBookAuthor, MyBookBox, MyBookContainer, MyBookName, MyBookTitle } from './MyBook.styled'
-import { useSelector } from 'react-redux';
-import { selectReadingBook } from '../../redux/bookSlice/BookSlice';
+import React from "react";
+import {
+  IconButton,
+  Inner,
+  MyBookAuthor,
+  MyBookBox,
+  MyBookContainer,
+  MyBookName,
+  MyBookTitle,
+} from "./MyBook.styled";
+import { useSelector } from "react-redux";
+import {
+  selectReadingBook,
+  selectReadingStatus,
+} from "../../redux/bookSlice/BookSlice";
 import placeholderBook from "../../assets/img/add-book.png";
 
 export const MyBook = () => {
- const readingBook = useSelector(selectReadingBook);
+  const readingBook = useSelector(selectReadingBook);
+  const readingStatus = useSelector(selectReadingStatus);
+  const isActive = readingStatus === "reading";
+  if (!readingBook) {
+    return <p>Loading...</p>;
+  }
 
- if (!readingBook) {
-  return <p>Loading...</p>;
-}
- 
   return (
     <MyBookContainer>
       <MyBookTitle>My reading</MyBookTitle>
@@ -18,8 +30,12 @@ export const MyBook = () => {
         <img src={readingBook.imageUrl || placeholderBook} alt="books-title" />
         <MyBookName>{readingBook.title}</MyBookName>
         <MyBookAuthor>{readingBook.author}</MyBookAuthor>
-        <div><IconButton><Inner /></IconButton></div>
+        <div>
+          <IconButton $active={isActive}>
+            <Inner />
+          </IconButton>
+        </div>
       </MyBookBox>
     </MyBookContainer>
-  )
-}
+  );
+};
