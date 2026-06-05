@@ -1,5 +1,6 @@
 import React from 'react'
 import Icons from '../../assets/icon/sprite.svg'
+import { IconSvg } from './Icon.styled';
 
 const Icon = ({name,className,size, color, secondaryColor}) => {
   const styles = {
@@ -7,10 +8,10 @@ const Icon = ({name,className,size, color, secondaryColor}) => {
     ...(secondaryColor && { '--icon-secondary': secondaryColor })
   };
   return (
-    <svg className={className} height={size.height} width={size.width} style={styles}>
+    <IconSvg className={className} height={size.height} width={size.width} style={styles}>
         {/* <use href={Icons+'#icon-'+id}></use> */}
         <use href={`${Icons}#${name}`} />
-    </svg>
+    </IconSvg>
   )
 }
 export default Icon
