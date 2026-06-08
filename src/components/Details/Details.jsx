@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 export const Details = () => {
   const readingStatus = useSelector(selectReadingStatus);
-  console.log(readingStatus);
   
   return (
     <div>

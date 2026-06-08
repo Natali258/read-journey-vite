@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AddReadingBtn, AddReadingForm, AddReadingInput, AddReadingTitle } from './AddReading.styled'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
@@ -6,13 +6,10 @@ import { finishBooksReadingThunk, startBooksReadingThunk } from '../../../redux/
 import { selectReadingBook } from '../../../redux/bookSlice/BookSlice'
 
 export const AddReading = () => {
-  // const [isReading, setIsReading] = useState(false);
    const {register, handleSubmit, setValue} = useForm()
    const book = useSelector(selectReadingBook);
-   console.log(book);
    const lastStatus = book.progress?.at(-1)?.status;
   const isReading = lastStatus === "active";
-   console.log(isReading);
     const dispatch = useDispatch()
    
     const onSubmit = (data) => {
@@ -21,13 +18,11 @@ export const AddReading = () => {
           id: book._id,
           page: data.page,
         }));
-        // setIsReading(false);
       } else {
         dispatch(startBooksReadingThunk({
           id: book._id,
           page: data.page,
         }));
-        // setIsReading(true);
       }
 
       setValue("page", "");
