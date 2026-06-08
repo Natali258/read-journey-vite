@@ -6,11 +6,13 @@ import { finishBooksReadingThunk, startBooksReadingThunk } from '../../../redux/
 import { selectReadingBook } from '../../../redux/bookSlice/BookSlice'
 
 export const AddReading = () => {
-  const [isReading, setIsReading] = useState(false);
+  // const [isReading, setIsReading] = useState(false);
    const {register, handleSubmit, setValue} = useForm()
    const book = useSelector(selectReadingBook);
    console.log(book);
-   
+   const lastStatus = book.progress?.at(-1)?.status;
+  const isReading = lastStatus === "active";
+   console.log(isReading);
     const dispatch = useDispatch()
    
     const onSubmit = (data) => {
@@ -19,13 +21,13 @@ export const AddReading = () => {
           id: book._id,
           page: data.page,
         }));
-        setIsReading(false);
+        // setIsReading(false);
       } else {
         dispatch(startBooksReadingThunk({
           id: book._id,
           page: data.page,
         }));
-        setIsReading(true);
+        // setIsReading(true);
       }
 
       setValue("page", "");
@@ -36,7 +38,7 @@ export const AddReading = () => {
       <AddReadingTitle>{isReading ? 'Stop page:' : 'Start page:'}</AddReadingTitle>
       <AddReadingForm action="" onSubmit={handleSubmit(onSubmit)}>
         <AddReadingInput type="number" placeholder='Page number:' {...register("page", { valueAsNumber: true })} />
-        <AddReadingBtn type='submit'>{isReading ? 'To finish' : 'To start'}</AddReadingBtn>
+        <AddReadingBtn type='submit'>{isReading ? 'To stop' : 'To start'}</AddReadingBtn>
       </AddReadingForm>
     </div>
   )
