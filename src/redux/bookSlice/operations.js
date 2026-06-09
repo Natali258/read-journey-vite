@@ -33,6 +33,7 @@ export const addOwnBooksThunk = createAsyncThunk(
   async (id, thunkApi) => {
     try {
       const { data } = await api.post(`books/add/${id}`);
+      toast.success('Book added to library!')
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);

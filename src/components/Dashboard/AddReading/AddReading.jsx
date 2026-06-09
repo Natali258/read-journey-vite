@@ -8,6 +8,8 @@ import { selectReadingBook } from '../../../redux/bookSlice/BookSlice'
 export const AddReading = () => {
    const {register, handleSubmit, setValue} = useForm()
    const book = useSelector(selectReadingBook);
+   console.log(book);
+   
    const lastStatus = book.progress?.at(-1)?.status;
   const isReading = lastStatus === "active";
     const dispatch = useDispatch()
