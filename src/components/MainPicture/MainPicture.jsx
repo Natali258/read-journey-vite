@@ -1,11 +1,12 @@
 import React from 'react'
 import mobilePhone from '../../assets/img/iPhone 15 Black.png'
-import { StlMainImgContainer } from './MainPicture.styled'
+// import mobilePhone2x from '../../assets/img/iPhone 15 Black2х.png'
+import { StlMainImg, StlMainImgContainer } from './MainPicture.styled'
 
 const MainPicture = () => {
   return (
     <StlMainImgContainer>
-        <img src={mobilePhone} alt="MobilePhone" />
+        <StlMainImg src={mobilePhone} alt="MobilePhone" />
     </StlMainImgContainer>
   )
 }

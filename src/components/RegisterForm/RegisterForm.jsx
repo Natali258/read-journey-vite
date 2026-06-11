@@ -5,6 +5,7 @@ import {
   StlFieldsRegister,
   StlFormRegister,
   StlInputRegister,
+  StlLinkRegister,
   StlNavLinkLogin,
   StlRegisterContainer,
   StlTitleRegister,
@@ -45,9 +46,12 @@ const RegisterForm = () => {
             {...register("password")}
           />
         </StlFieldsRegister>
-        <StlBtnRegister type="submit">Registration</StlBtnRegister>
+        <StlLinkRegister>
+          <StlBtnRegister type="submit">Registration</StlBtnRegister>
+          <StlNavLinkLogin to="/login">Already have an account?</StlNavLinkLogin>
+        </StlLinkRegister>
       </StlFormRegister>
-      <StlNavLinkLogin to="/login">Already have an account?</StlNavLinkLogin>
+      {/* <StlNavLinkLogin to="/login">Already have an account?</StlNavLinkLogin> */}
     </StlRegisterContainer>
   );
 };

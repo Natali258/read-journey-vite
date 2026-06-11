@@ -1,8 +1,13 @@
 import styled from "styled-components";
+import { breakpoints } from "../../breakpoints ";
 
 export const StlSectionsContainer = styled.div`
 display: flex;
-gap: 16px;
-flex-direction: row;
-margin: 32px;
+gap: 10px;
+flex-direction: column;
+@media (min-width: ${breakpoints.desktop}) {
+    gap: 16px;
+    flex-direction: row;
+    margin: 32px;
+  }
 `
