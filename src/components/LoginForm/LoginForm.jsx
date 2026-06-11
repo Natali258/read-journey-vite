@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../Logo/Logo'
-import { StlBtnLogin, StlFieldsLogin, StlFormLogin, StlInputLogin, StlLoginContainer, StlNavLinkRegister, StlTitleLogin } from './LoginForm.styled'
+import { StlBtnLogin, StlFieldsLogin, StlFormLogin, StlInputLogin, StlLinkLogin, StlLoginContainer, StlNavLinkRegister, StlTitleLogin } from './LoginForm.styled'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
 import { loginThunk } from '../../redux/authSlice/operations'
@@ -23,9 +23,12 @@ const LoginForm = () => {
                 <StlInputLogin type="text" placeholder="Mail" {...register('email')}></StlInputLogin>
                 <StlInputLogin type="text" placeholder="Password" {...register('password')}></StlInputLogin>
             </StlFieldsLogin>
-            <StlBtnLogin type='submit'>Log In</StlBtnLogin>
+            <StlLinkLogin>
+              <StlBtnLogin type='submit'>Log In</StlBtnLogin>
+              <StlNavLinkRegister to='/register'>Don’t have an account?</StlNavLinkRegister>
+            </StlLinkLogin>
         </StlFormLogin>
-        <StlNavLinkRegister to='/register'>Don’t have an account?</StlNavLinkRegister>
+        {/* <StlNavLinkRegister to='/register'>Don’t have an account?</StlNavLinkRegister> */}
     </StlLoginContainer>
   )
 }
