@@ -89,7 +89,7 @@ color: var(--main-text-color);
 }
 `
 export const StlLinkLogin = styled.div`
-margin-top: 20px;
+margin-top: 72px;
 display:flex;
 flex-direction: row;
 align-items: center;
