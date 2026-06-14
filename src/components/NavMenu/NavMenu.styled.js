@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom'
+import { breakpoints } from "../../breakpoints ";
 
 export const StlNavContainer = styled.div`
-display:flex;
+display:none;
+@media (min-width: ${breakpoints.tablet}) {
+    display:flex;
+}
 `
 
 export const StlNavUl = styled.ul`
@@ -10,6 +14,12 @@ display:inline-flex;
 margin: 0;
 margin-left: 334px;
 gap: 40px;
+@media (min-width: ${breakpoints.tablet}) {
+    display:inline-flex;
+    margin: 0;
+    margin-left: 334px;
+    gap: 40px;
+}
 `
 
 export const StlNavLink = styled(NavLink)`

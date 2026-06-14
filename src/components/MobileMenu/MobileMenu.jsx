@@ -18,3 +18,21 @@ export const MobileMenu = ({ isOpen, onClose }) => {
     </Backdrop>
   );
 };
+
+
+
+// import { createPortal } from "react-dom";
+
+// export const MobileMenu = ({ isOpen, onClose }) => {
+//   // if (!isOpen) return null;
+
+//   return createPortal(
+//     <Backdrop isOpen={isOpen} onClick={onClose}>
+//       <Menu onClick={(e) => e.stopPropagation()}>
+//         <button onClick={onClose}>✕</button>
+//         Menu
+//       </Menu>
+//     </Backdrop>,
+//     document.body
+//   );
+// };

@@ -17,7 +17,7 @@ export const Menu = s.div`
   width: 70%;
   height: 100%;
   background: #1c1c1c;
-  padding: 24px;
+  padding: 34px 40px;
 
   transform: ${({ isOpen }) =>
     isOpen ? "translateX(0)" : "translateX(100%)"};

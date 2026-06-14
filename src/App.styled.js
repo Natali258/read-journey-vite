@@ -3,6 +3,7 @@ import { breakpoints } from './breakpoints ';
 
 export const AppContainer = s.div`
 /* base — від 320px (гумова) */
+ 
   width: 100%;
   padding: 20px;
   background-color: var(--body-background-color);
