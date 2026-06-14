@@ -5,6 +5,8 @@ import Icon from '../Icon/Icon'
 import {useDispatch, useSelector } from 'react-redux';
 import { selectTotalPages } from '../../redux/bookSlice/BookSlice';
 import { getBooksThunk } from "../../redux/bookSlice/operations";
+import { selectSearchFilter } from "../../redux/Filter/SearchFilterSlice";
+import { useVisibleBooks } from "../../hooks/useVisibleBooks";
 
 
 
@@ -13,11 +15,13 @@ export const Pagination = () => {
     const totalPages = useSelector(selectTotalPages);
     const [searchParams, setSearchParams] = useSearchParams();
     const page = Number(searchParams.get("page")) || 1;
+    const filter = useSelector(selectSearchFilter);
+    const visibleCount = useVisibleBooks();
+  
+  useEffect(() => {
+    dispatch(getBooksThunk({ page, limit: visibleCount, ...filter }));
+  }, [dispatch, page, filter, visibleCount]);
 
-    useEffect(() => {
-  dispatch(getBooksThunk({ page, limit: 10 }));
-}, [dispatch, page]);
-    
   const handlePrev = () => {
     if (page > 1) {
       setSearchParams({ page: page - 1 });

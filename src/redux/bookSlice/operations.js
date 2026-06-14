@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 export const getBooksThunk = createAsyncThunk(
   "books/getBooks",
-  async ({ page = 1, limit = 10, title = "", author = "" }, thunkApi) => {
+  async ({ page = 1, limit, title = "", author = "" }, thunkApi) => {
     try {
       const { data } = await api.get(
         `books/recommend?page=${page}&limit=${limit}&title=${title}&author=${author}`,
