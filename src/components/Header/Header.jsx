@@ -10,10 +10,6 @@ import { MobileMenu } from '../MobileMenu/MobileMenu'
 
 
 export const Header = ({ onMenuClick }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const toggleMenu = () => setIsMenuOpen(prev => !prev);
-  // const closeMenu = () => setIsMenuOpen(false);
-
   const dispatch = useDispatch()
   const logOut = () => {
       dispatch(logoutThunk())
@@ -31,7 +27,6 @@ export const Header = ({ onMenuClick }) => {
         <span></span>
         <span></span>
       </BurgerBtn>
-      {/* <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} /> */}
     </StlHeaderContainer>
 
   )
