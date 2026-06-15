@@ -1,14 +1,20 @@
 import s from 'styled-components';
+import { breakpoints } from '../../breakpoints ';
 
 export const RecommendedItem = s.li`
-width: 137px;
-height: 247px;
-
+width: 100%;
+// height: 247px;
 &:hover {
     transform: scale(1.08);
-  }`
+  }
+@media (min-width: ${breakpoints.tablet}) {
+  width: 137px;
+  height: 247px;
+}    
+`
 
 export const RecommendedBtnImg = s.button`
+width: 100%;
 cursor: pointer;
 border: none;
 
@@ -17,8 +23,8 @@ border: none;
 //   }`
 
 export const RecommendedImg = s.img`
-// width: 100%;
-width: 137px;
+width: 100%;
+// width: 137px;
 height: 208px;
 border-radius: 8px;`
 
@@ -27,7 +33,6 @@ width: 89px;
 display: inline-block;`
 
 export const RecommendedBooksName = s.h2`
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 14px;
 line-height: 129%;
@@ -38,7 +43,6 @@ white-space: nowrap;
 overflow: hidden;`
 
 export const RecommendedBooksWriter = s.p`
-font-family: var(--font-family);
 font-weight: 500;
 font-size: 10px;
 line-height: 120%;

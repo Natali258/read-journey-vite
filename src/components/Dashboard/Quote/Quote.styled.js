@@ -1,17 +1,16 @@
 import s from 'styled-components'
-
-export const QuoteContainer = s.div`
-    // padding: 15px 20px 15px 20px
-    // border-radius: 12px;
-    // background-color: var(--select-background-color);`
+import { breakpoints } from '../../../breakpoints '
 
     export const QuoteUl = s.ul`
-    display: flex;
-    flex-direction: row;
-    gap: 14px;
-    padding: 15px 20px 15px 20px;
-    border-radius: 12px;
-    background-color: var(--select-background-color);
+    display: none;
+    @media (min-width: ${breakpoints.tablet}) {
+        display: flex;
+        flex-direction: row;
+        gap: 14px;
+        padding: 15px 20px 15px 20px;
+        border-radius: 12px;
+        background-color: var(--select-background-color);
+    }
     `
 
     export const QuoteLiImg = s.li`

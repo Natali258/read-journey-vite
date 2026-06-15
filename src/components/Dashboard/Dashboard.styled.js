@@ -3,12 +3,12 @@ import { breakpoints } from '../../breakpoints '
 
 export const DashboardContainer = s.div`
 display: flex;
-padding: 40px 20px 20px 20px;
+padding: 20px;
 flex-direction: column;
 gap: 20px;
 border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
-    width: 353px;
+    padding: 40px 20px 20px 20px;
 }
 `
