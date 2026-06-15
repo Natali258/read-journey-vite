@@ -1,7 +1,3 @@
-/* * {
-  box-sizing: border-box;
-} */
-
 @font-face {
   font-family: 'Gilroy';
   src: url('./assets/fonts/Gilroy-Medium.woff') format('woff');
@@ -17,26 +13,13 @@
 }
 
 html,body, #root {
-  /* display: flex; */
   font-family: 'Gilroy', 'Roboto', sans-serif;
-  /* max-width: 100%; */
-  /* height: 100%; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* main {
-  display: flex;
-  max-width: 100%;
-} */
-
-/* section {
-  display: flex;
-} */
-
 ul {
   list-style: none;
   padding: 0;

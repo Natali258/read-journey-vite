@@ -9,10 +9,10 @@ import { logoutThunk } from '../../redux/authSlice/operations'
 import { MobileMenu } from '../MobileMenu/MobileMenu'
 
 
-export const Header = () => {
+export const Header = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen(prev => !prev);
-  const closeMenu = () => setIsMenuOpen(false);
+  // const toggleMenu = () => setIsMenuOpen(prev => !prev);
+  // const closeMenu = () => setIsMenuOpen(false);
 
   const dispatch = useDispatch()
   const logOut = () => {
@@ -26,12 +26,12 @@ export const Header = () => {
       <NavMenu/>
       <UserBar/>
       <StlBtnLogOut onClick={logOut}>Log out</StlBtnLogOut>
-      <BurgerBtn onClick={toggleMenu}>
+      <BurgerBtn onClick={onMenuClick}>
         <span></span>
         <span></span>
         <span></span>
       </BurgerBtn>
-      <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
+      {/* <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} /> */}
     </StlHeaderContainer>
 
   )

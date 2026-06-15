@@ -1,7 +1,7 @@
 import s from "styled-components";
 
 export const Backdrop = s.div`
-  position: fixed;
+  // position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
 
@@ -11,10 +11,11 @@ export const Backdrop = s.div`
 `;
 
 export const Menu = s.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 70%;
+  // position: fixed;
+  position: absolute;
+  top: 0; 
+  right: 0;  
+  width: 35%;
   height: 100%;
   background: #1c1c1c;
   padding: 34px 40px;
@@ -25,5 +26,9 @@ export const Menu = s.div`
 `;
 
 export const CloseBtn = s.button`
-// display: block;
+display: block;
+// width: 28px;
+// height: 28px;
+margin-left: auto;
+color: var(--main-text-color);
 `
