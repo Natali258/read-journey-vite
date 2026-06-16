@@ -12,9 +12,9 @@ display:none;
 export const StlNavUl = styled.ul`
 display:inline-flex;
 margin: 0;
-margin-left: 334px;
-gap: 40px;
-@media (min-width: ${breakpoints.tablet}) {
+margin-left: 223px;
+gap: 32px;
+@media (min-width: ${breakpoints.desktop}) {
     display:inline-flex;
     margin: 0;
     margin-left: 334px;

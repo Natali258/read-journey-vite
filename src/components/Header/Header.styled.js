@@ -64,4 +64,7 @@ export const BurgerBtn = styled.button`
   span:nth-child(3) {
     bottom: 0;
   }
+@media (min-width: ${breakpoints.tablet}) {
+    display: none;
+}
 `;

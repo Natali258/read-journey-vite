@@ -20,7 +20,7 @@ line-height: 40px;
 `
 export const StlUserName = styled.span`
 display:none;
-@media (min-width: ${breakpoints.tablet}) {
+@media (min-width: ${breakpoints.desktop}) {
     display:block;
     color: var(--main-text-color);
     font-family: var(--font-family);
