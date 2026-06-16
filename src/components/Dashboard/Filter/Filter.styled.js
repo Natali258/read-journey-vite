@@ -2,7 +2,14 @@ import s from 'styled-components';
 import { breakpoints } from '../../../breakpoints ';
 
 export const FilterContainer = s.div`
-width: 100%;`
+width: 100%;
+@media (min-width: ${breakpoints.tablet}) {
+    width: 50%;
+}
+@media (min-width: ${breakpoints.desktop}) {
+    width: 100%;
+}
+`
 
 export const FilterTitle = s.p`
 margin-left: 14px;

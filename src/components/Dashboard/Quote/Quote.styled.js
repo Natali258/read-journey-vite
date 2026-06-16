@@ -3,7 +3,7 @@ import { breakpoints } from '../../../breakpoints '
 
     export const QuoteUl = s.ul`
     display: none;
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         display: flex;
         flex-direction: row;
         gap: 14px;

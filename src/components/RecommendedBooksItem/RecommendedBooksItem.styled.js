@@ -4,23 +4,26 @@ import { breakpoints } from '../../breakpoints ';
 export const RecommendedItem = s.li`
 width: 100%;
 // height: 247px;
-&:hover {
-    transform: scale(1.08);
-  }
+
 @media (min-width: ${breakpoints.tablet}) {
   width: 137px;
   height: 247px;
-}    
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+@media (min-width: ${breakpoints.desktop}) {
+  &:hover {
+    transform: scale(1.08);
+  }
+}     
 `
 
 export const RecommendedBtnImg = s.button`
 width: 100%;
 cursor: pointer;
 border: none;
-
-// &:hover {
-//     transform: scale(1.08);
-//   }`
+`
 
 export const RecommendedImg = s.img`
 width: 100%;

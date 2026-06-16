@@ -5,11 +5,13 @@ export const RecommendedPageContainer = s.div`
 display: flex;
 flex-direction: column;
 gap: 10px;
-padding-top: 10px;
+margin-top: 10px;
 @media (min-width: ${breakpoints.tablet}) {
-    flex-direction: row;
     gap: 16px;
-    padding-top: 16px;
+    margin-top: 16px;
+}
+@media (min-width: ${breakpoints.desktop}) {
+    flex-direction: row;
     max-width: auto;
 }
 `

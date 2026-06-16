@@ -9,6 +9,9 @@ background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
     padding: 40px;
 }
+@media (min-width: ${breakpoints.desktop}) {
+    padding: 40px;
+}
 `
 
 export const RecommendedTitle = s.h1`
@@ -29,7 +32,7 @@ grid-template-columns: repeat(2, 1fr);
 gap: 21px;
 margin-top: 22px;
 @media (min-width: ${breakpoints.tablet}) {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-top: 28px;
 }`
