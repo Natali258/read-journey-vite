@@ -1,4 +1,5 @@
 import s from 'styled-components';
+import { breakpoints } from '../../breakpoints ';
 
 export const Overlay = s.div`
   position: fixed;
@@ -14,19 +15,21 @@ export const Overlay = s.div`
 `;
 
 export const ModalBox = s.div`
+  box-sizing: border-box;
   position: relative;
   overflow-y: auto;
-
   border: 1px solid var(--modal-background-color);
   background: var(--container-background-color);
   border-radius: 12px;
-  padding: 50px;
-  max-width: 500px;
-  // width: 100%;
-  // width: 500px;
-  // height: 483px;
+  // padding: 40px 98px;
+  padding: 40px;
+  width: calc(100% - 32px);   /* 🔥 важливо */
+  max-width: 335px;
+@media (min-width: ${breakpoints.tablet}) {
+    padding: 50px; 
+    max-width: 500px;
+}
 `;
-
 export const CloseButton = s.button`
   position: absolute;
   top: 16px;

@@ -10,7 +10,7 @@ export const AppContainer = s.div`
 
   /* від 375px — адаптивна */
   @media (min-width: ${breakpoints.mobile375}) {
-    width: 375px;
+    max-width: 375px;
     // padding-left: 20px;
     // padding-right: 20px;
     // background-color: var(--body-background-color);
@@ -18,14 +18,14 @@ export const AppContainer = s.div`
 
   /* tablet */
   @media (min-width: ${breakpoints.tablet}) {
-    width: 768px;
+    max-width: 768px;
     padding: 32px;
     // background-color: var(--body-background-color)
   }
 
   /* desktop */
   @media (min-width: ${breakpoints.desktop}) {
-    width: 1440px;
+    max-width: 1440px;
     // margin-left: auto;
     // margin-right: auto;
   }`
