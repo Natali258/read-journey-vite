@@ -7,18 +7,19 @@ export const StlLoginContainer = styled.div`
     border-radius: 30px;
     box-sizing: border-box;
     background-color: var(--container-background-color);
+    margin: 0 auto;
     @media (max-width: ${breakpoints.mobile375}) {
         flex:1;
     };
     @media (min-width: ${breakpoints.mobile375}) {
-        width: 375px;
+        max-width: 375px;
     };
     @media (min-width: ${breakpoints.tablet}) {
-        width: 768px;
+        max-width: 768px;
         padding: 40px 64px 214px 64px;
     };
     @media (min-width: ${breakpoints.desktop}) {
-        /* width: 1440px; */
+        max-width: 1440px;
         flex:1;
         padding: 40px 64px 40px 64px;
     };

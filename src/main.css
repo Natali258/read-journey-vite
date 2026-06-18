@@ -24,7 +24,7 @@ body {
   outline: 3px solid blue;
 }
 html,body, #root {
-  /* max-width: 100%; */
+  max-width: 100%;
   font-family: 'Gilroy', 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;

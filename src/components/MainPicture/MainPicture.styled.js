@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { breakpoints } from "../../breakpoints ";
 
 export const StlMainImgContainer = styled.div`
+max-width: 375px;
+margin: 0 auto;
 padding: 20px 40px 0 40px;
 background-color: var(--container-background-color);
 border-radius: 30px;
@@ -11,6 +13,7 @@ display: flex;
     display: none;
 };
 @media (min-width: ${breakpoints.desktop}) {
+    max-width: 1440px;
     padding: 88px 98px 0 98px;
     background-color: var(--container-background-color);
     border-radius: 30px;

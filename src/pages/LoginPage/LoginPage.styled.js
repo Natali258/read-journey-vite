@@ -5,6 +5,9 @@ export const StlLoginSectionsContainer = styled.div`
 display: flex;
 gap: 10px;
 flex-direction: column;
+@media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
 @media (min-width: ${breakpoints.desktop}) {
     gap: 16px;
     flex-direction: row;
