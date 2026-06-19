@@ -20,9 +20,6 @@
 * {
   outline: 1px solid red;
 }
-body {
-  outline: 3px solid blue;
-}
 html,body, #root {
   max-width: 100%;
   font-family: 'Gilroy', 'Roboto', sans-serif;
@@ -31,6 +28,9 @@ html,body, #root {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body {
+  outline: 3px solid blue;
 }
 ul {
   list-style: none;

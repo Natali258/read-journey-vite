@@ -8,19 +8,11 @@ export const StlLoginContainer = styled.div`
     box-sizing: border-box;
     background-color: var(--container-background-color);
     margin: 0 auto;
-    @media (max-width: ${breakpoints.mobile375}) {
-        flex:1;
-    };
-    @media (min-width: ${breakpoints.mobile375}) {
-        max-width: 375px;
-    };
+    flex:1;
     @media (min-width: ${breakpoints.tablet}) {
-        max-width: 768px;
         padding: 40px 64px 214px 64px;
     };
     @media (min-width: ${breakpoints.desktop}) {
-        max-width: 1440px;
-        flex:1;
         padding: 40px 64px 40px 64px;
     };
 `

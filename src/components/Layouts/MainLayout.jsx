@@ -3,6 +3,7 @@ import { Header } from '../Header/Header'
 import { Outlet } from 'react-router-dom'
 import { Loader } from '../Loader/Loader'
 import { MobileMenu } from '../MobileMenu/MobileMenu'
+import { StlMainLayoutContainer } from './MainLayout.styled'
 
 
 export const MainLayout = () => {
@@ -10,13 +11,13 @@ export const MainLayout = () => {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
   const closeMenu = () => setIsMenuOpen(false);
   return (
-    <div>
+    <StlMainLayoutContainer>
         <Suspense fallback={<Loader />}></Suspense>
         <Header onMenuClick={toggleMenu}/>
         <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
         <main>
             <Outlet/>
         </main>
-    </div>
+    </StlMainLayoutContainer>
   )
 }

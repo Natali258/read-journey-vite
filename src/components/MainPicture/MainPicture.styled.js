@@ -7,8 +7,9 @@ margin: 0 auto;
 padding: 20px 40px 0 40px;
 background-color: var(--container-background-color);
 border-radius: 30px;
-flex:1;
 display: flex;
+height: 331px; 
+overflow: hidden;
 @media (min-width: ${breakpoints.tablet}) {
     display: none;
 };
@@ -18,12 +19,16 @@ display: flex;
     background-color: var(--container-background-color);
     border-radius: 30px;
     flex:1;
+    height: 100%;
     display: flex;
 };
 `
 export const StlMainImg = styled.img`
 width: 100%;
+height: 100%;
+object-fit: cover;
 @media (min-width: ${breakpoints.desktop}) {
     width: auto;
+    object-fit: none;
 };
 `
