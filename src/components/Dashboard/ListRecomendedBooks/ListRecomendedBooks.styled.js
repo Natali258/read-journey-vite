@@ -1,21 +1,28 @@
 import { NavLink } from 'react-router-dom'
 import s from 'styled-components'
+import { breakpoints } from '../../../breakpoints '
 
 export const ListRecomendedBooksContainer = s.div`
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 15px;
 padding: 20px;
 background-color: var(--select-background-color);
 border-radius: 12px;
+@media (min-width: ${breakpoints.tablet}) {
+    gap: 20px;
+}
 `
 export const ListRecomendedBooksTitle = s.p`
 font-family: var(--font-family);
 font-weight: 700;
-font-size: 20px;
+font-size: 18px;
 line-height: 100%;
 letter-spacing: -0.02em;
 color: var(--main-text-color);
+@media (min-width: ${breakpoints.tablet}) {
+    font-size: 20px;
+}
 `
 export const ListRecomendedBooksUl = s.ul`
 display: grid;
@@ -29,8 +36,10 @@ height: 141px;
 export const ListRecomendedBooksImg = s.img`
 width: 100%;
 height: 107px;
+border-radius: 8px;
 `
 export const ListRecomendedBooksName = s.p`
+// margin-top: 8px;
 font-family: var(--font-family);
 font-weight: 700;
 font-size: 10px;
@@ -42,12 +51,16 @@ white-space: nowrap;
 overflow: hidden;
 `
 export const ListRecomendedBooksWriter = s.p`
+margin-top: 2px;
 font-family: var(--font-family);
 font-weight: 500;
 font-size: 10px;
 line-height: 120%;
 letter-spacing: -0.02em;
 color: var(--grey-text-color);
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 `
 export const ListRecomendedBooksLinkContainer = s.div`
 display: flex;
@@ -56,7 +69,7 @@ display: flex;
 export const ListRecomendedBooksNavLink = s(NavLink)`
 font-family: var(--font-family);
 font-weight: 500;
-font-size: 14px;
+font-size: 12px;
 line-height: 200%;
 letter-spacing: -0.02em;
 text-decoration: underline;
@@ -64,7 +77,11 @@ text-decoration-skip-ink: none;
 color: var(--grey-text-color);
 
 &:hover {
-    color: var(--main-text-color);}`
+    color: var(--main-text-color);}
+@media (min-width: ${breakpoints.tablet}) {
+    font-size: 14px;
+}
+`
 
 export const ListRecomendedBooksLogoSpan = s.span`
 display: inline-block;

@@ -23,11 +23,8 @@ line-height: 100%;
 letter-spacing: 0.02em;
 color: var(--main-text-color);
 @media (min-width: ${breakpoints.tablet}) {
-    
-}
-@media (min-width: ${breakpoints.desktop}) {
     font-size: 28px;
-    line-height: 114%; 
+    line-height: 114%;   
 }
 `
 

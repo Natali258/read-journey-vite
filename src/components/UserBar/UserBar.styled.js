@@ -10,13 +10,18 @@ gap: 8px;
 
 export const StlUserPhoto = styled.span`
 display:block;
-width: 40px;
-height: 40px;
+width: 35px;
+height: 35px;
 border-radius: 50%;
 border: 1px solid var(--focus-word-color);
 color: var(--main-text-color);
 text-align: center;
-line-height: 40px;
+line-height: 35px;
+@media (min-width: ${breakpoints.tablet}) {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
 `
 export const StlUserName = styled.span`
 display:none;
