@@ -3,9 +3,8 @@ import { breakpoints } from '../../breakpoints ';
 
 export const LibraryPageContainer = s.div`
 display: flex;
-flex-direction: row;
-gap: 16px;
-padding-top: 16px;
+flex-direction: column;
+gap: 10px;
 @media (min-width: ${breakpoints.tablet}) {
    
 }

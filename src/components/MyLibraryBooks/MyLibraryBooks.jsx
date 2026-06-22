@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { MyLibraryBooksContainer, MyLibraryBooksList, MyLibraryBooksTitle } from './MyLibraryBooks.styled'
+import { MyLibraryBooksContainer, MyLibraryBooksList, MyLibraryBooksTitle, MyLibraryHeaderRow } from './MyLibraryBooks.styled'
 import { MyLibraryMessage } from '../MyLibraryMessage/MyLibraryMessage'
 import { SelectFilter } from '../SelectFilter/SelectFilter'
 import { useDispatch, useSelector } from 'react-redux'
@@ -27,8 +27,10 @@ export const MyLibraryBooks = () => {
   };
   return (
     <MyLibraryBooksContainer>
-      <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
-      <SelectFilter options={options}/>
+      <MyLibraryHeaderRow>
+        <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
+        <SelectFilter options={options}/>
+      </MyLibraryHeaderRow>
       {ownerBooks.length > 0 ? (
         <MyLibraryBooksList>
           {ownerBooks.map((book) => (

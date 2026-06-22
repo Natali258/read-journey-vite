@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SelectFilterArrow, SelectFilterContainer, SelectFilterList, SelectFilterListItem } from './SelectFilter.styled'
+import { SelectFilterArrow, SelectFilterBox, SelectFilterLabel, SelectFilterList, SelectFilterListItem, } from './SelectFilter.styled'
 import Icon from '../Icon/Icon'
 import { useDispatch } from 'react-redux';
 import { getOwnBookThunk } from '../../redux/bookSlice/operations';
@@ -19,7 +19,8 @@ export const SelectFilter = ({ options, placeholder = "All books" }) => {
     setIsOpen(false);
   };
   return (
-    <SelectFilterContainer onClick={toggling}>{selectedOption?.label || placeholder}
+    <SelectFilterBox onClick={toggling}>
+      <SelectFilterLabel>{selectedOption?.label || placeholder}</SelectFilterLabel>
       <SelectFilterArrow $isOpen={isOpen}>
         <Icon name="icon-chevron-down" size={{width:16, height:16}} color="var(--main-text-color)"/>
       </SelectFilterArrow>
@@ -28,6 +29,6 @@ export const SelectFilter = ({ options, placeholder = "All books" }) => {
           {option.label}
         </SelectFilterListItem>
       ))}</SelectFilterList>)}
-    </SelectFilterContainer>
+    </SelectFilterBox>
   )
 }
