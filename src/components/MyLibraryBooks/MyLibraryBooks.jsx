@@ -27,11 +27,11 @@ export const MyLibraryBooks = () => {
   };
   return (
     <MyLibraryBooksContainer>
-      <MyLibraryHeaderRow>
-        <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
-        <SelectFilter options={options}/>
-      </MyLibraryHeaderRow>
-      {ownerBooks.length > 0 ? (
+        <MyLibraryHeaderRow>
+          <MyLibraryBooksTitle>My library</MyLibraryBooksTitle>
+          <SelectFilter options={options}/>
+        </MyLibraryHeaderRow>
+        {ownerBooks.length > 0 ? (
         <MyLibraryBooksList>
           {ownerBooks.map((book) => (
             <RecommendedBooksItem key={book._id} book={book} onDelete={handleDelete}/>

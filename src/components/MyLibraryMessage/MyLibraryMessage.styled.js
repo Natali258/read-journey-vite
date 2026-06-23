@@ -2,12 +2,22 @@ import s from 'styled-components';
 import { breakpoints } from '../../breakpoints ';
 
 export const MyLibraryMessageContainer = s.div`
-margin: 63px 0 60px 0;
+width: 197px;
+margin: auto;
+margin-top: 63px;
+margin-bottom: 60px;
 @media (min-width: ${breakpoints.tablet}) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 86px;
+    margin-bottom: 120px;
+    
+}
+@media (min-width: ${breakpoints.desctop}) {
+    margin-top: 147px;
+    margin-bottom: 192px;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
 }
 `
 

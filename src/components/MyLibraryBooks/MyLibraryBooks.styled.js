@@ -2,8 +2,10 @@ import s from 'styled-components'
 import { breakpoints } from '../../breakpoints '
 
 export const MyLibraryBooksContainer = s.div`
-position: relative;
-// display: flex;
+// position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-between;;
 padding: 40px 20px;
 border-radius: 30px;
 background-color: var(--container-background-color);
