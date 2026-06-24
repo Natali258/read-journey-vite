@@ -7,7 +7,7 @@ gap: 4px`
 
 export const StlLogoText = styled.span`
 display: none;
-@media (min-width: ${breakpoints.desktop}) {
+@media (min-width: ${breakpoints.tablet}) {
     display: inline-block;
     font-family: Gilroy;
     font-weight: 700;

@@ -1,14 +1,18 @@
 import React from 'react'
 import Icon  from '../Icon/Icon'
 import { StlLogoContainer, StlLogoText } from './Logo.styled'
+import { useLocation } from 'react-router-dom';
 
 const Logo = () => {
+  const { pathname } = useLocation();
+  
+  const showText = pathname === "/login" || pathname === "/register";
   return (
     <StlLogoContainer>
         <span>
             <Icon name='icon-Logo' size={{width: 42, height: 17}} color='rgba(249, 249, 249, 1)'/>
         </span>
-        <StlLogoText>read journey</StlLogoText>
+        {showText &&<StlLogoText>read journey</StlLogoText>}
     </StlLogoContainer>
   )
 }
