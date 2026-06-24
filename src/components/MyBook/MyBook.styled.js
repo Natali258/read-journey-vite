@@ -1,50 +1,75 @@
 import s from 'styled-components';
+import { breakpoints } from '../../breakpoints ';
 
 export const MyBookContainer = s.div`
 display: flex;
 flex-direction: column;
-gap: 44px;
+gap: 40px;
 padding: 40px;
 border-radius: 30px;
 background-color: var(--container-background-color);
-min-width: 847px;
+@media (min-width: ${breakpoints.tablet}) {
+    gap: 44px;
+}
 `
 export const MyBookTitle = s.h2`
-font-family: var(--font-family);
-font-weight: 700;
-font-size: 28px;
-line-height: 114%;
-letter-spacing: 0.02em;
-color: var(--main-text-color);`
-
-export const MyBookBox = s.div`
-text-align: center;
-`
-
-export const MyBookName = s.p`
-margin-top: 25px;
-margin-bottom: 4px;
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 20px;
 line-height: 100%;
-letter-spacing: -0.02em;
-color: var(--main-text-color);`
+letter-spacing: 0.02em;
+color: var(--main-text-color);
+@media (min-width: ${breakpoints.tablet}) {
+    font-size: 28px;
+    line-height: 114%;
+}
+`
+export const MyBookBox = s.div`
+text-align: center;
+`
+export const MyBookImg = s.img`
+width: 137px;
+height: 208px;
+@media (min-width: ${breakpoints.tablet}) {
+    width: 169px;
+    height: 256px;
+}
+`
 
-export const MyBookAuthor = s.p`
-margin-bottom: 25px;
-font-family: var(--font-family);
-font-weight: 500;
+export const MyBookName = s.p`
+margin-top: 10px;
+margin-bottom: 4px;
+font-weight: 700;
 font-size: 14px;
 line-height: 129%;
 letter-spacing: -0.02em;
-color: var(--grey-text-color);`
+color: var(--main-text-color);
+@media (min-width: ${breakpoints.tablet}) {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 100%;
+}
+`
+
+export const MyBookAuthor = s.p`
+margin-bottom: 20px;
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 10px;
+line-height: 120%;
+letter-spacing: -0.02em;
+color: var(--grey-text-color);
+@media (min-width: ${breakpoints.tablet}) {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 129%;
+}
+`
 
 // Button
 
 export const IconButton = s.button`
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 2px solid #fff;
   background: #0f0f0f;
@@ -70,13 +95,21 @@ export const IconButton = s.button`
         transform: scale(1.15) rotate(90deg);
       }
     `}
-`;
+@media (min-width: ${breakpoints.tablet}) {
+  width: 50px;
+  height: 50px;
+}
+`
 
 export const Inner = s.div`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: #ff0000;
   border-radius: 50%;
   transition: transform 200ms ease;
   text-align: center;
-`;
+@media (min-width: ${breakpoints.tablet}) {
+  width: 40px;
+  height: 40px;
+}
+`

@@ -5,6 +5,7 @@ import {
   MyBookAuthor,
   MyBookBox,
   MyBookContainer,
+  MyBookImg,
   MyBookName,
   MyBookTitle,
 } from "./MyBook.styled";
@@ -27,7 +28,7 @@ export const MyBook = () => {
     <MyBookContainer>
       <MyBookTitle>My reading</MyBookTitle>
       <MyBookBox>
-        <img src={readingBook.imageUrl || placeholderBook} alt="books-title" />
+        <MyBookImg src={readingBook.imageUrl || placeholderBook} alt="books-title" />
         <MyBookName>{readingBook.title}</MyBookName>
         <MyBookAuthor>{readingBook.author}</MyBookAuthor>
         <div>
