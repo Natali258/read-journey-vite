@@ -1,5 +1,5 @@
 import React from 'react'
-import { AddReadingBtn, AddReadingForm, AddReadingInput, AddReadingTitle } from './AddReading.styled'
+import { AddReadingBtn, AddReadingContainer, AddReadingForm, AddReadingInput, AddReadingTitle } from './AddReading.styled'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
 import { finishBooksReadingThunk, startBooksReadingThunk } from '../../../redux/bookSlice/operations'
@@ -41,12 +41,12 @@ export const AddReading = () => {
       }
     }
   return (
-    <div>
+    <AddReadingContainer>
       <AddReadingTitle>{isReading ? 'Stop page:' : 'Start page:'}</AddReadingTitle>
       <AddReadingForm action="" onSubmit={handleSubmit(submit)}>
         <AddReadingInput type="number" placeholder='Page number:' {...register("page", { valueAsNumber: true })} />
         <AddReadingBtn type='submit' onClick={searchModal()}>{isReading ? 'To stop' : 'To start'}</AddReadingBtn>
       </AddReadingForm>
-    </div>
+    </AddReadingContainer>
   )
 }

@@ -2,7 +2,8 @@ import s from 'styled-components'
 import { breakpoints } from '../../../breakpoints '
 
 export const ProgressContainer = s.div`
-display: block;`
+// display: block;
+flex: 1;`
 
 export const ProgressTitle = s.p`
 display: block;
@@ -14,6 +15,7 @@ letter-spacing: -0.02em;
 color: var(--main-text-color);
 @media (min-width: ${breakpoints.tablet}) {
     font-size: 20px;
+    margin-top: 0;
 }
 `
 
@@ -36,8 +38,14 @@ margin-bottom: 20px;
 width: 80px;
 height: 80px;
 border-radius: 50%;
-background-color: var(--select-background-color)
+background-color: var(--select-background-color);
 @media (min-width: ${breakpoints.tablet}) {
+    margin-top: 50px;
+    margin-bottom: 52px;
+    width: 100px;
+    height: 100px;
+}
+@media (min-width: ${breakpoints.desktop}) {
     margin-top: 60px;
     margin-bottom: 183px;
     width: 100px;

@@ -9,7 +9,10 @@ padding: 40px;
 border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
-    gap: 44px;
+  gap: 32px;
+}
+@media (min-width: ${breakpoints.desktop}) {
+  gap: 44px;
 }
 `
 export const MyBookTitle = s.h2`
@@ -59,9 +62,12 @@ line-height: 120%;
 letter-spacing: -0.02em;
 color: var(--grey-text-color);
 @media (min-width: ${breakpoints.tablet}) {
-    margin-bottom: 25px;
+    margin-bottom: 16px;
     font-size: 14px;
     line-height: 129%;
+}
+@media (min-width: ${breakpoints.desktop}) {
+    margin-bottom: 25px;
 }
 `
 

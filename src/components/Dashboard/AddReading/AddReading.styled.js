@@ -2,7 +2,8 @@ import s from 'styled-components'
 import { breakpoints } from '../../../breakpoints '
 
 export const AddReadingContainer = s.div`
-display: block;`
+// display: block;
+flex: 1;`
 
 export const AddReadingTitle = s.p`
 margin-bottom: 8px;
