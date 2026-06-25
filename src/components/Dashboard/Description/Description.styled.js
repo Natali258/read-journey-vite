@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import s from 'styled-components';
 import { breakpoints } from '../../../breakpoints ';
+import Icon from '../../Icon/Icon';
 
 export const DescriptionContainer = s.div`
 padding: 20px;
@@ -85,6 +86,14 @@ color: var(--grey-text-color);
 export const DescriptionLogoSpan = s.span`
 display: inline-block;
 margin-left: auto;
+`
+export const DescriptionIcon = s(Icon)`
+  width: 20px;
+  height: 20px;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 24px;
+    height: 24px;
+  }
 `
 
 

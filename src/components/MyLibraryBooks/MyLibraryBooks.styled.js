@@ -5,12 +5,17 @@ export const MyLibraryBooksContainer = s.div`
 // position: relative;
 display: flex;
 flex-direction: column;
-justify-content: space-between;;
+justify-content: space-between;
 padding: 40px 20px;
 border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
-  padding: 40px;  
+  padding: 40px; 
+  min-height: 518px; 
+  justify-content: normal;
+}
+@media (min-width: ${breakpoints.desktop}) {
+  
 }
 `
 export const MyLibraryHeaderRow = s.div`

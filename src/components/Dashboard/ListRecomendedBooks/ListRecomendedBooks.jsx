@@ -1,6 +1,7 @@
 import { InitialState } from "../../api/booksAPI";
 import {
   ListRecomendedBooksContainer,
+  ListRecomendedBooksIcon,
   ListRecomendedBooksImg,
   ListRecomendedBooksLi,
   ListRecomendedBooksLinkContainer,
@@ -43,9 +44,8 @@ export const ListRecomendedBooks = () => {
           Home
         </ListRecomendedBooksNavLink>
         <ListRecomendedBooksLogoSpan>
-          <Icon
+          <ListRecomendedBooksIcon
             name="icon-log-in"
-            size={{ width: 24, height: 24 }}
             color="rgba(249, 249, 249, 1)"
           />
         </ListRecomendedBooksLogoSpan>

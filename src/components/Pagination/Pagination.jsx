@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { PaginationBtn, PaginationContainerBtn } from './Pagination.styled'
+import { PaginationBtn, PaginationBtnIcon, PaginationContainerBtn } from './Pagination.styled'
 import Icon from '../Icon/Icon'
 import {useDispatch, useSelector } from 'react-redux';
 import { selectTotalPages } from '../../redux/bookSlice/BookSlice';
@@ -37,10 +37,10 @@ export const Pagination = () => {
   return (
     <PaginationContainerBtn>
         <PaginationBtn onClick={handlePrev} disabled={page === 1}>
-            <Icon name='icon-left'size={{width: 20, height: 20}}/>
+            <PaginationBtnIcon name='icon-left'/>
         </PaginationBtn>
         <PaginationBtn onClick={handleNext} disabled={page === totalPages}>
-            <Icon name='icon-right' size={{width: 20, height: 20}} />
+            <PaginationBtnIcon name='icon-right' />
         </PaginationBtn>
     </PaginationContainerBtn>
   )

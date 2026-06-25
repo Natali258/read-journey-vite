@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import { breakpoints } from '../../breakpoints ';
+import Icon from '../Icon/Icon';
 
 export const StlLogoContainer = styled.div`
 display: inline-flex;
-gap: 4px`
+gap: 4px
+`
+export const LogoIcon = styled(Icon)`
+  width: 42px;
+  height:17px;
+  
+`
 
 export const StlLogoText = styled.span`
 display: none;

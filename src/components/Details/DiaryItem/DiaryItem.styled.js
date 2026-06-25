@@ -1,8 +1,27 @@
 import s from 'styled-components'
+import Icon from '../../Icon/Icon'
+import { breakpoints } from '../../../breakpoints '
 
 export const DiaryContainerLi = s.li`
     display: flex;
 `
+export const DiaryIconItem = s(Icon)`
+  width: 16px;
+  height: 16px;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 20px;
+    height: 20px;
+  }
+`
+export const DiaryIconItemBtn = s(Icon)`
+  width: 14px;
+  height: 14px;
+//   @media (min-width: ${breakpoints.tablet}) {
+//     width: 20px;
+//     height:20px;
+//   }
+`
+
 export const DiaryIcon = s.div`
     display: inline-block;
     margin-right: 10px;

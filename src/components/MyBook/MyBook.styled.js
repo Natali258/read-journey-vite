@@ -10,6 +10,7 @@ border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
   gap: 32px;
+  padding-bottom: 25px;
 }
 @media (min-width: ${breakpoints.desktop}) {
   gap: 44px;

@@ -5,6 +5,7 @@ import {
   StatisticsContainerHeader,
   StatisticsContainerIcon,
   StatisticsGreen,
+  StatisticsIcon,
   StatisticsProgress,
   StatisticsProgressContainer,
   StatisticsProgressPage,
@@ -39,16 +40,14 @@ export const Statistics = () => {
         <StatisticsTitle>Statistics</StatisticsTitle>
         <StatisticsContainerIcon>
           <li>
-            <Icon
+            <StatisticsIcon
               name="icon-hourglass"
-              size={{ width: 20, height: 20 }}
               color="var(--grey-text-color)"
             />
           </li>
           <li>
-            <Icon
+            <StatisticsIcon
               name="icon-pie-chart"
-              size={{ width: 20, height: 20 }}
               color="var(--pia-chart-color)"
               secondaryColor="var(--main-text-color)"
             />

@@ -1,4 +1,6 @@
 import s from 'styled-components';
+import Icon from '../Icon/Icon';
+import { breakpoints } from '../../breakpoints ';
 
 export const PaginationContainerBtn = s.div`
 position: absolute;
@@ -19,4 +21,12 @@ color: var(--focus-word-color);
 &:hover {
     background-color: var(--main-text-color);
     color: var(--container-background-color);}
+`
+export const PaginationBtnIcon = s(Icon)`
+  width: 16px;
+  height: 16px;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 20px;
+    height: 20px;
+  }
 `

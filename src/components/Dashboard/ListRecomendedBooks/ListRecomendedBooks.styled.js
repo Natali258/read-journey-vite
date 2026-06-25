@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import s from 'styled-components'
 import { breakpoints } from '../../../breakpoints '
+import Icon from '../../Icon/Icon'
 
 export const ListRecomendedBooksContainer = s.div`
 display: flex;
@@ -86,4 +87,12 @@ color: var(--grey-text-color);
 export const ListRecomendedBooksLogoSpan = s.span`
 display: inline-block;
 margin-left: auto;
+`
+export const ListRecomendedBooksIcon = s(Icon)`
+  width: 20px;
+  height: 20px;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 24px;
+    height: 24px;
+  }
 `

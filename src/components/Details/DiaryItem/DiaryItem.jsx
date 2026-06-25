@@ -3,7 +3,7 @@ import Icon from '../../Icon/Icon';
 import progressBlock from '../../../assets/img/block.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { selectReadingBook } from '../../../redux/bookSlice/BookSlice';
-import { DiaryBtn, DiaryContainerData, DiaryContainerLi, DiaryContainerPage, DiaryData, DiaryIcon, DiaryMinutes, DiaryPages, DiaryPercent, DiaryPerPages } from './DiaryItem.styled';
+import { DiaryBtn, DiaryContainerData, DiaryContainerLi, DiaryContainerPage, DiaryData, DiaryIcon, DiaryIconItem, DiaryIconItemBtn, DiaryMinutes, DiaryPages, DiaryPercent, DiaryPerPages } from './DiaryItem.styled';
 import { deleteReadingThunk } from '../../../redux/bookSlice/operations';
 
 
@@ -29,7 +29,7 @@ export const DiaryItem = ({ progress, book }) => {
   return (
     <DiaryContainerLi>
       <DiaryIcon>
-        <Icon name = 'icon-block-diary' color="var(--main-text-color)" size={{ width: 20, height: 20 }} />
+        <DiaryIconItem name = 'icon-block-diary' color="var(--main-text-color)" />
       </DiaryIcon>
       <DiaryContainerData>
         <DiaryData>{formatted}</DiaryData>
@@ -42,7 +42,7 @@ export const DiaryItem = ({ progress, book }) => {
         <DiaryPerPages>{progress.speed} pages <br/> per hour</DiaryPerPages>
       </DiaryContainerPage>
       <DiaryBtn onClick={() => handleDeleteProgress(progress._id)}>
-        <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
+        <DiaryIconItemBtn name='icon-trash-2' color='var(--main-text-color)'/>
       </DiaryBtn>
     </DiaryContainerLi>
     

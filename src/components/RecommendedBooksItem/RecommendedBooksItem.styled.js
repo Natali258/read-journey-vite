@@ -1,5 +1,6 @@
 import s from 'styled-components';
 import { breakpoints } from '../../breakpoints ';
+import Icon from '../Icon/Icon';
 
 export const RecommendedItem = s.li`
 width: 100%;
@@ -24,7 +25,6 @@ width: 100%;
 cursor: pointer;
 border: none;
 `
-
 export const RecommendedImg = s.img`
 width: 100%;
 // width: 137px;
@@ -58,4 +58,9 @@ height: 28px;
 border-radius: 50%;
 background-color: var(--red-bground-color);
 border: 1px solid var(--red-boder-color);
-margin-left: 20px;`
+margin-left: 20px;
+`
+export const RecommendedBooksIcon = s(Icon)`
+  width: 14px;
+  height: 14px;
+`

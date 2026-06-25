@@ -1,5 +1,5 @@
 import React from 'react'
-import { RecommendedBookBox, RecommendedBooksDltBtn, RecommendedBooksName, RecommendedBooksWriter, RecommendedBtnImg, RecommendedImg, RecommendedItem } from './RecommendedBooksItem.styled';
+import { RecommendedBookBox, RecommendedBooksDltBtn, RecommendedBooksIcon, RecommendedBooksName, RecommendedBooksWriter, RecommendedBtnImg, RecommendedImg, RecommendedItem } from './RecommendedBooksItem.styled';
 import { useModal } from '../Modal/ModalContext';
 import { ModalBook } from '../Modal/ModalBook/ModalBook';
 import Icon from '../Icon/Icon';
@@ -20,7 +20,7 @@ export const RecommendedBooksItem = ({ book, onDelete }) => {
         <RecommendedBooksWriter>{book.author}</RecommendedBooksWriter>
       </RecommendedBookBox>
       {onDelete && (<RecommendedBooksDltBtn type='button' onClick={() => onDelete(book._id)}>
-        <Icon name='icon-trash-2' size={{width: 14, height: 14}} color='var(--main-text-color)'/>
+        <RecommendedBooksIcon name='icon-trash-2' color='var(--main-text-color)'/>
       </RecommendedBooksDltBtn>)}
     </RecommendedItem>
   )

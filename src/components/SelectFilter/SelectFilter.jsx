@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { SelectFilterArrow, SelectFilterBox, SelectFilterLabel, SelectFilterList, SelectFilterListItem, } from './SelectFilter.styled'
+import { SelectFilterArrow, SelectFilterBox, SelectFilterIcon, SelectFilterLabel, SelectFilterList, SelectFilterListItem, } from './SelectFilter.styled'
 import Icon from '../Icon/Icon'
 import { useDispatch } from 'react-redux';
 import { getOwnBookThunk } from '../../redux/bookSlice/operations';
@@ -22,7 +22,7 @@ export const SelectFilter = ({ options, placeholder = "All books" }) => {
     <SelectFilterBox onClick={toggling}>
       <SelectFilterLabel>{selectedOption?.label || placeholder}</SelectFilterLabel>
       <SelectFilterArrow $isOpen={isOpen}>
-        <Icon name="icon-chevron-down" size={{width:16, height:16}} color="var(--main-text-color)"/>
+        <SelectFilterIcon name="icon-chevron-down" color="var(--main-text-color)"/>
       </SelectFilterArrow>
       {isOpen && (<SelectFilterList>{options.map((option) => (
         <SelectFilterListItem key={option.value}  onClick={onOptionClicked(option)}>

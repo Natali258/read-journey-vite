@@ -1,5 +1,5 @@
 import React from 'react'
-import { DescriptionContainer, DescriptionItem, DescriptionItemNumber, DescriptionItemSpan, DescriptionItemText, DescriptionLinkContainer, DescriptionList, DescriptionLogoSpan, DescriptionNavLink, DescriptionTitle } from './Description.styled'
+import { DescriptionContainer, DescriptionIcon, DescriptionItem, DescriptionItemNumber, DescriptionItemSpan, DescriptionItemText, DescriptionLinkContainer, DescriptionList, DescriptionLogoSpan, DescriptionNavLink, DescriptionTitle } from './Description.styled'
 import Icon from '../../Icon/Icon'
 
 export const Description = () => {
@@ -19,7 +19,7 @@ export const Description = () => {
         <DescriptionLinkContainer>
             <DescriptionNavLink to="/library">My library</DescriptionNavLink>
             <DescriptionLogoSpan>
-                <Icon name='icon-log-in' size={{width: 24, height: 24}} color='rgba(249, 249, 249, 1)'/>
+                <DescriptionIcon name='icon-log-in' size={{width: 24, height: 24}} color='rgba(249, 249, 249, 1)'/>
             </DescriptionLogoSpan>
         </DescriptionLinkContainer>
     </DescriptionContainer>

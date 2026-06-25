@@ -6,20 +6,13 @@ export const StlRegisterContainer = styled.div`
     padding: 20px 20px 40px 20px;
     border-radius: 30px;
     box-sizing: border-box;
+    margin: 0 auto;
+    flex:1;
     background-color: var(--container-background-color);
-    @media (max-width: ${breakpoints.mobile375}) {
-        flex:1;
-    };
-    @media (min-width: ${breakpoints.mobile375}) {
-        width: 375px;
-    };
     @media (min-width: ${breakpoints.tablet}) {
-        width: 768px;
         padding: 40px 64px 214px 64px;
     };
     @media (min-width: ${breakpoints.desktop}) {
-        /* width: 1440px; */
-        flex:1;
         padding: 40px 64px 40px 64px;
     };
 `

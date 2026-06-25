@@ -1,5 +1,6 @@
 import s from 'styled-components'
 import { breakpoints } from '../../breakpoints ';
+import Icon from '../Icon/Icon';
 
 export const SelectFilterBox = s.div`
 position: relative;
@@ -53,5 +54,13 @@ export const SelectFilterListItem = s.li`
 
   &:hover {
     color: var(--main-text-color);
+  }
+`
+export const SelectFilterIcon = s(Icon)`
+  width: 16px;
+  height: 16px;
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 20px;
+    height: 20px;
   }
 `

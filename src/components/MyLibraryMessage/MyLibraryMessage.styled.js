@@ -7,6 +7,7 @@ margin: auto;
 margin-top: 63px;
 margin-bottom: 60px;
 @media (min-width: ${breakpoints.tablet}) {
+    width: 274px;
     margin-top: 86px;
     margin-bottom: 120px;
     
