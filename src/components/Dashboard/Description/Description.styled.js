@@ -11,7 +11,6 @@ border-radius: 12px;
 
 export const DescriptionTitle = s.p`
 display: block;
-font-family: Gilroy;
 font-weight: 700;
 font-size: 18px;
 line-height: 100%;
@@ -26,10 +25,10 @@ export const DescriptionList = s.ul`
 display: flex;
 flex-direction: column;
 gap: 20px;
-padding-right: 20px;
 margin: 20px 0 20px 0;
 @media (min-width: ${breakpoints.tablet}) {
     margin: 40px 0 26px 0;
+    padding-right: 20px;
 } 
 `
 
@@ -39,7 +38,8 @@ gap: 12px;
 flex-direction: row;`
 
 export const DescriptionItemNumber = s.div`
-display: inline-block;
+flex-shrink: 0;
+display: block;
 width: 44px;
 height: 44px;
 border-radius: 50%;
