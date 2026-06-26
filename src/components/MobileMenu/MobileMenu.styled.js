@@ -24,6 +24,7 @@ export const Menu = s.div`
   transform: ${({ isOpen }) =>
     isOpen ? "translateX(0)" : "translateX(100%)"};
   transition: transform 300ms ease;
+  z-index: 1000;
 `
 export const NavMenuCountainer = s.div`
 display: flex;

@@ -2,7 +2,14 @@ import s from 'styled-components';
 import { breakpoints } from '../../../breakpoints ';
 
 export const AddBookContainer = s.div`
-width: 100%;`
+// width: 100%;
+@media (min-width: ${breakpoints.tablet}) {
+    flex: 1.1;
+} 
+@media (min-width: ${breakpoints.desktop}) {
+    flex: initial;
+}    
+`
 
 export const AddBookTitle = s.p`
 margin-left: 14px;

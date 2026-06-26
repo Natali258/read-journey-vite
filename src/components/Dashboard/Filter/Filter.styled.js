@@ -4,9 +4,10 @@ import { breakpoints } from '../../../breakpoints ';
 export const FilterContainer = s.div`
 width: 100%;
 @media (min-width: ${breakpoints.tablet}) {
-    width: 50%;
+    flex: 1.1;
 }
 @media (min-width: ${breakpoints.desktop}) {
+    flex: initial;
     width: 100%;
 }
 `

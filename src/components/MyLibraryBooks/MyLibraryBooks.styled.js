@@ -20,6 +20,7 @@ background-color: var(--container-background-color);
 `
 export const MyLibraryHeaderRow = s.div`
 display: flex;
+flex-direction: row;
 justify-content: space-between; 
 `
 export const MyLibraryBooksTitle = s.p`

@@ -7,6 +7,12 @@ export const DescriptionContainer = s.div`
 padding: 20px;
 background-color: var(--select-background-color);
 border-radius: 12px;
+@media (min-width: ${breakpoints.tablet}) {
+    flex: 1;
+}
+@media (min-width: ${breakpoints.desktop}) {
+    flex: initial;
+}
 `
 
 export const DescriptionTitle = s.p`

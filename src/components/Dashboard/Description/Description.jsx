@@ -25,8 +25,8 @@ export const Description = () => {
             <DescriptionItemSpan>
               Create a personal library:
             </DescriptionItemSpan>
-            add <br />
-            the books you intend to read <br /> to it.
+            add 
+            the books you intend to read  to it.
           </DescriptionItemText>
         </DescriptionItem>
         <DescriptionItem>
@@ -35,7 +35,7 @@ export const Description = () => {
             <DescriptionItemSpan>
               Create your first workout:
             </DescriptionItemSpan>
-            define <br /> a goal, choose a period, start training.
+            define  a goal, choose a period, start training.
           </DescriptionItemText>
         </DescriptionItem>
       </DescriptionList>

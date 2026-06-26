@@ -10,12 +10,12 @@ gap: 15px;
 padding: 20px;
 background-color: var(--select-background-color);
 border-radius: 12px;
+flex:1;
 @media (min-width: ${breakpoints.tablet}) {
     gap: 20px;
 }
 `
 export const ListRecomendedBooksTitle = s.p`
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 18px;
 line-height: 100%;
@@ -29,6 +29,12 @@ export const ListRecomendedBooksUl = s.ul`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
+@media (min-width: ${breakpoints.tablet}) {
+    grid-template-columns: repeat(3, 71px);
+}
+@media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: repeat(3, 1fr);
+}
 `
 export const ListRecomendedBooksLi = s.li`
 width: 71px;
@@ -40,8 +46,6 @@ height: 107px;
 border-radius: 8px;
 `
 export const ListRecomendedBooksName = s.p`
-// margin-top: 8px;
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 10px;
 line-height: 120%;
@@ -53,7 +57,6 @@ overflow: hidden;
 `
 export const ListRecomendedBooksWriter = s.p`
 margin-top: 2px;
-font-family: var(--font-family);
 font-weight: 500;
 font-size: 10px;
 line-height: 120%;
@@ -68,7 +71,6 @@ display: flex;
 `
 
 export const ListRecomendedBooksNavLink = s(NavLink)`
-font-family: var(--font-family);
 font-weight: 500;
 font-size: 12px;
 line-height: 200%;
