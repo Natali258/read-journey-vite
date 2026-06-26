@@ -11,7 +11,12 @@ background-color: var(--container-background-color);
     padding: 16px;
 }
 `
-
+export const StlHeaderNavContainer = styled.div`
+display:none;
+@media (min-width: ${breakpoints.tablet}) {
+    display:flex;
+}
+`
 export const StlBtnLogOut = styled.button`
 display: none;
 @media (min-width: ${breakpoints.tablet}) {

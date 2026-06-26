@@ -2,7 +2,7 @@ import s from 'styled-components'
 import { breakpoints } from '../../breakpoints '
 
 export const RecommendedContainer = s.div`
-position: relative;
+// position: relative;
 padding: 40px 20px 40px 20px;
 border-radius: 30px;
 background-color: var(--container-background-color);
@@ -13,9 +13,19 @@ background-color: var(--container-background-color);
     padding: 40px;
 }
 `
+export const RecommendedBox = s.div`
+display: flex;
+flex-direction: row;
+margin-left: auto;
+// @media (min-width: ${breakpoints.tablet}) {
+//     padding: 40px;
+// }
+// @media (min-width: ${breakpoints.desktop}) {
+//     padding: 40px;
+// }
+`
 
 export const RecommendedTitle = s.h1`
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 20px;
 line-height: 100%;

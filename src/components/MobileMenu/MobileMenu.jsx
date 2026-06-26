@@ -1,8 +1,16 @@
 import React from 'react'
 import { NavMenu } from '../NavMenu/NavMenu';
-import { Backdrop, CloseBtn, Menu } from './MobileMenu.styled';
+import { Backdrop, CloseBtn, Menu, NavMenuCountainer, StlBtnLogOut } from './MobileMenu.styled';
+import { NavLink } from 'react-router-dom';
+import { logoutThunk } from '../../redux/authSlice/operations';
+import { useDispatch } from 'react-redux';
 
 export const MobileMenu = ({ isOpen, onClose }) => {
+  const dispatch = useDispatch();
+  const logOut = () => {
+      dispatch(logoutThunk());
+    };
+ 
   return (
     <Backdrop isOpen={isOpen} onClick={onClose}>
       <Menu
@@ -10,10 +18,10 @@ export const MobileMenu = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <CloseBtn onClick={onClose}>✕</CloseBtn>
-        <NavMenu/>
-
-        {/* <NavLink to="/" onClick={onClose}>Home</NavLink>
-        <NavLink to="/library" onClick={onClose}>My library</NavLink> */}
+        <NavMenuCountainer>
+          <NavMenu/>
+          <StlBtnLogOut onClick={logOut}>Log out</StlBtnLogOut>
+        </NavMenuCountainer>
       </Menu>
     </Backdrop>
   );

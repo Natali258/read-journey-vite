@@ -1,4 +1,5 @@
 import {
+  RecommendedBox,
   RecommendedContainer,
   RecommendedList,
   RecommendedTitle,
@@ -13,8 +14,10 @@ export const RecommendedBooks = () => {
  
   return (
     <RecommendedContainer>
-      <RecommendedTitle>Recommended</RecommendedTitle>
-      <Pagination />
+      <RecommendedBox>
+        <RecommendedTitle>Recommended</RecommendedTitle>
+        <Pagination />
+      </RecommendedBox>
       <RecommendedList>
         {books.map((book) => (
           <RecommendedBooksItem key={book._id} book={book} />
