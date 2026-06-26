@@ -76,19 +76,25 @@ background-color: var(--green-color);
 `
 export const StatisticsProgress = s.span`
 font-weight: 500;
-font-size: 20px;
+font-size: 14px;
 line-height: 0%;
 letter-spacing: -0.02em;
 color: var(--main-text-color);
+@media (min-width: ${breakpoints.tablet}) {
+    font-size: 20px;
+  }
 `
 export const StatisticsProgressPage = s.p`
 font-weight: 500;
-font-size: 12px;
+font-size: 10px;
 line-height: 117%;
 letter-spacing: -0.02em;
 text-align: center;
 color: var(--grey-text-color);
 margin-top: 8px;
+@media (min-width: ${breakpoints.tablet}) {
+    font-size: 12px;
+  }
 `
 export const StatisticsTotalProgress = s.span`
 position: absolute;
