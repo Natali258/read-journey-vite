@@ -10,6 +10,9 @@ background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
     padding: 16px;
 }
+/* @media (min-width: ${breakpoints.desktop}) {
+    max-width: 1280px;
+} */
 `
 export const StlHeaderNavContainer = styled.div`
 display:none;

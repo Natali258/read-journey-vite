@@ -9,6 +9,7 @@ flex-direction: column;
     display: block;
   }
 @media (min-width: ${breakpoints.desktop}) {
+    display: flex;
     gap: 16px;
     flex-direction: row;
     margin: 32px;

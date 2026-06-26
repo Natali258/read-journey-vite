@@ -6,12 +6,12 @@ display: flex;
 flex-direction: column;
 gap: 10px;
 @media (min-width: ${breakpoints.tablet}) {
-   
-}
-    @media (min-width: ${breakpoints.desktop}) {
-    display: flex;
-    flex-direction: row;
     gap: 16px;
     padding-top: 16px;
+}
+    @media (min-width: ${breakpoints.desktop}) {
+    flex-direction: row;
+    padding-top: 16px;
+
 }
 `

@@ -13,7 +13,7 @@ export const LibraryPage = () => {
         <AddBook/>
         <ListRecomendedBooks/>
       </Dashboard>
-      <MyLibraryBooks/>
+      <section><MyLibraryBooks/></section>
     </LibraryPageContainer>
   )
 }

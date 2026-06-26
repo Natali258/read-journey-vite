@@ -3,6 +3,7 @@ import { breakpoints } from "../../breakpoints ";
 
 export const StlAuthLayoutContainer = styled.main`
 position: relative;
+width: 100%;
 max-width: 375px;
 min-height: 100%;
 margin: 0 auto;

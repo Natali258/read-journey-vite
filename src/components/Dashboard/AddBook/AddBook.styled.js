@@ -2,7 +2,7 @@ import s from 'styled-components';
 import { breakpoints } from '../../../breakpoints ';
 
 export const AddBookContainer = s.div`
-// width: 100%;
+width: 100%;
 @media (min-width: ${breakpoints.tablet}) {
     flex: 1.1;
 } 
@@ -15,7 +15,6 @@ export const AddBookTitle = s.p`
 margin-left: 14px;
 margin-bottom: 8px;
 
-font-family: Gilroy;
 font-weight: 500;
 font-style: Medium;
 font-size: 14px;

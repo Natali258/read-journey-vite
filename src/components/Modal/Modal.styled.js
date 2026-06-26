@@ -12,6 +12,7 @@ export const Overlay = s.div`
   justify-content: center;
 
   z-index: 1000;
+  
 `;
 
 export const ModalBox = s.div`
@@ -25,6 +26,7 @@ export const ModalBox = s.div`
   padding: 40px;
   width: calc(100% - 32px);   /* 🔥 важливо */
   max-width: 335px;
+  
 @media (min-width: ${breakpoints.tablet}) {
     padding: 50px; 
     max-width: 500px;
