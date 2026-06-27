@@ -20,8 +20,8 @@ import { breakpoints } from '../../../breakpoints '
     export const QuoteLiText = s.li`
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 15px;
-    line-height: 129%;
+    font-size: 14px;
+    line-height: 115%;
     letter-spacing: -0.02em;
     color: var(--grey-text-color);
     `

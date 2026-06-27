@@ -36,6 +36,9 @@ margin: 20px 0 20px 0;
     margin: 40px 0 26px 0;
     padding-right: 20px;
 } 
+@media (min-width: ${breakpoints.desktop}) {
+    padding-right: 0;
+}
 `
 
 export const DescriptionItem = s.li`

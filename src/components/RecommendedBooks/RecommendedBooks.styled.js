@@ -48,7 +48,7 @@ margin-top: 22px;
 }
 @media (min-width: ${breakpoints.desktop}) {
     grid-template-columns: repeat(5, 1fr);
-    // gap: 24px;
+    gap: 20px;
     // margin-top: 28px;
 }`
 
