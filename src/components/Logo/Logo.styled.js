@@ -26,4 +26,14 @@ display: none;
     text-transform: uppercase;
     color: var(--main-text-color);
   }
+@media (min-width: ${breakpoints.desktop}) {
+    display: inline-block;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    color: var(--main-text-color);
+  }
 `

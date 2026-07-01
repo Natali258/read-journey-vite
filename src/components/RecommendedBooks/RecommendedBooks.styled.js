@@ -8,9 +8,11 @@ border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
     padding: 40px;
+    min-height: 518px;
 }
 @media (min-width: ${breakpoints.desktop}) {
     padding: 40px;
+    min-height: 651px;
 }
 `
 export const RecommendedBox = s.div`

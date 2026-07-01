@@ -28,7 +28,7 @@ export const ModalBox = s.div`
   max-width: 335px;
   
 @media (min-width: ${breakpoints.tablet}) {
-    padding: 50px; 
+    padding: 50px;
     max-width: 500px;
 }
 `;

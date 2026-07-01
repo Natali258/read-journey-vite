@@ -4,7 +4,8 @@ export const ModalBookIsReadContainer = s.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-text-align: center;` 
+text-align: center;
+` 
     
 export const ModalBookIsReadImg = s.img`
 margin-bottom: 32px;`

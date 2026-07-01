@@ -12,6 +12,5 @@ padding-top: 10px;
 }
 @media (min-width: ${breakpoints.desktop}) {
     flex-direction: row;
-    
 }
 `

@@ -15,7 +15,7 @@ background-color: var(--container-background-color);
   justify-content: normal;
 }
 @media (min-width: ${breakpoints.desktop}) {
-  
+  min-height: 651px;
 }
 `
 export const MyLibraryHeaderRow = s.div`
@@ -48,4 +48,5 @@ margin-top: 22px;
 }
 @media (min-width: ${breakpoints.desktop}) {
     grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }`

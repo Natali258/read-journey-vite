@@ -4,13 +4,13 @@ export const ModalGoodJobCountainer = s.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-text-align: center;`
+text-align: center;
+// width: 342px;`
 
 export const ModalGoodJobImg = s.img`
 margin-bottom: 32px;`
 
 export const ModalGoodJobTitle = s.p`
-font-family: var(--font-family);
 font-weight: 700;
 font-size: 20px;
 line-height: 100%;
@@ -20,7 +20,6 @@ color: var(--main-text-color);`
 
 export const ModalGoodJobText = s.p`
 margin-top: 14px;
-font-family: var(--font-family);
 font-weight: 500;
 font-size: 14px;
 line-height: 129%;

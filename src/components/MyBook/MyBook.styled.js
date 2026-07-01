@@ -16,7 +16,8 @@ background-color: var(--container-background-color);
   gap: 44px;
 }
 `
-export const MyBookTitle = s.h2`
+export const MyBookTitle = s.p`
+display: inline-block;
 font-weight: 700;
 font-size: 20px;
 line-height: 100%;

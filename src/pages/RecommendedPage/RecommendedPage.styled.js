@@ -12,6 +12,6 @@ margin-top: 10px;
 }
 @media (min-width: ${breakpoints.desktop}) {
     flex-direction: row;
-    max-width: auto;
+    // max-width: auto;
 }
 `

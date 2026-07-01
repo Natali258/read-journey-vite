@@ -7,9 +7,14 @@ export const DiaryContainer = s.div`
   margin-top: 20px;
   flex: 1;
   flex-direction: column;
+  overflow-y: auto;
+  // max-height: 400px;
   @media (min-width: ${breakpoints.tablet}) {
       margin-top: 0;
   }
+  // @media (min-width: ${breakpoints.desktop}) {
+  //     max-height: 373px;
+  // }
 `
 export const DiaryHeaderContainer = s.div`
   display: flex;
@@ -55,4 +60,13 @@ export const DiaryUl = s.ul`
   background-color: var(--select-background-color);
   padding: 20px;
   margin-top: 20px;
+  overflow-y: auto;
+  scrollbar-color: #686868 transparent;
+   max-height: 211px;
+  @media (min-width: ${breakpoints.tablet}) {
+      max-height: 252px;
+  }
+  @media (min-width: ${breakpoints.desktop}) {
+      max-height: 373px;
+  }
 `

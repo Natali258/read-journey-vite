@@ -5,7 +5,7 @@ import Icon from '../../Icon/Icon'
 
 export const ListRecomendedBooksContainer = s.div`
 display: flex;
-margin-top: 58px;
+// margin-top: 58px;
 flex-direction: column;
 gap: 15px;
 padding: 20px;
@@ -14,9 +14,12 @@ border-radius: 12px;
 flex:1;
 @media (min-width: ${breakpoints.tablet}) {
     gap: 20px;
+    margin-top: 0;
 }
 @media (min-width: ${breakpoints.desktop}) {
     flex: initial;
+    margin-top: 58px;
+    padding: 20px 40px 20px 20px;
 }  
 `
 export const ListRecomendedBooksTitle = s.p`

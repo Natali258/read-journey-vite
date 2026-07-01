@@ -11,6 +11,9 @@ flex: 1;
 @media (min-width: ${breakpoints.tablet}) {
     margin-top: 0;
 }
+@media (min-width: ${breakpoints.desktop}) {
+    flex: none;
+}
 `
 export const StatisticsContainerHeader= s.div`
 display: flex;
@@ -48,6 +51,7 @@ letter-spacing: -0.02em;
 color: var(--grey-text-color);
 @media (min-width: ${breakpoints.desktop}) {
       display: block;
+      width: 293px;
   }
 `
 export const StatisticsProgressContainer = s.div`

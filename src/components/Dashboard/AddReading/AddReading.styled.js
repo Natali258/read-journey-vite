@@ -3,7 +3,10 @@ import { breakpoints } from '../../../breakpoints '
 
 export const AddReadingContainer = s.div`
 // display: block;
-flex: 1;`
+flex: 1;
+@media (min-width: ${breakpoints.desktop}) {
+    flex: none;
+}`
 
 export const AddReadingTitle = s.p`
 margin-bottom: 8px;
@@ -52,6 +55,7 @@ line-height: 133%;
 @media (min-width: ${breakpoints.tablet}) {
     padding: 16px 14px;
     font-size: 14px;
+    width: 313px;
 }
 `
 

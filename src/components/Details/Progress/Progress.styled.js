@@ -3,7 +3,10 @@ import { breakpoints } from '../../../breakpoints '
 
 export const ProgressContainer = s.div`
 // display: block;
-flex: 1;`
+flex: 1;
+@media (min-width: ${breakpoints.desktop}) {
+    flex: none;
+}`
 
 export const ProgressTitle = s.p`
 display: block;
