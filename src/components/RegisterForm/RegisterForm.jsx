@@ -24,7 +24,7 @@ const RegisterForm = () => {
 
   return (
     <StlRegisterContainer>
-      <Logo />
+      <Logo tabletVisible={true} />
       <StlTitleRegister>
         Expand your mind, reading <span>a book</span>
       </StlTitleRegister>

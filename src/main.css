@@ -28,11 +28,10 @@ html,body, #root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  outline: 3px solid blue;
-}
+
 body {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 ul {
   list-style: none;

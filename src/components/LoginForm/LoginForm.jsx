@@ -16,7 +16,7 @@ const LoginForm = () => {
 
   return (
     <StlLoginContainer>
-        <Logo/>
+        <Logo tabletVisible={true}/>
         <StlTitleLogin>Expand your mind, reading <span>a book</span></StlTitleLogin>
         <StlFormLogin action="" onSubmit={handleSubmit(submit)}>
             <StlFieldsLogin>
