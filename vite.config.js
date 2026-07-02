@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/read-journey-vite/login',
+  base: '/read-journey-vite/',
   plugins: [
     react({
       babel: {
