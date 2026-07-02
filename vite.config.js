@@ -14,18 +14,3 @@ export default defineConfig({
     open: true,
   },
 });
-
-// export default defineConfig({
-//   base: '/read-journey-vite/',
-//   plugins: [
-//     react({
-//       babel: {
-//         plugins: [['babel-plugin-react-compiler']],
-//       },
-//       server: {
-//         open: true
-//       }
-//     }),
-    
-//   ],
-// })
