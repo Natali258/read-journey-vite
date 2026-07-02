@@ -4,10 +4,7 @@ import { LogoIcon, StlLogoContainer, StlLogoText } from './Logo.styled'
 // import { useLocation } from 'react-router-dom';
 
 const Logo = ({ tabletVisible=false }) => {
-  console.log(tabletVisible);
-  // const { pathname } = useLocation();
-  
-  // const showText = pathname === "/login" || pathname === "/register";
+ 
   return (
     <StlLogoContainer>
         <span>

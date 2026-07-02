@@ -1,18 +1,31 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/read-journey-vite/',
+  base: "/read-journey-vite/",
   plugins: [
     react({
       babel: {
-        plugins: [['babel-plugin-react-compiler']],
+        plugins: [["babel-plugin-react-compiler"]],
       },
-      server: {
-        open: true
-      }
     }),
-    
   ],
-})
+  server: {
+    open: true,
+  },
+});
+
+// export default defineConfig({
+//   base: '/read-journey-vite/',
+//   plugins: [
+//     react({
+//       babel: {
+//         plugins: [['babel-plugin-react-compiler']],
+//       },
+//       server: {
+//         open: true
+//       }
+//     }),
+    
+//   ],
+// })
