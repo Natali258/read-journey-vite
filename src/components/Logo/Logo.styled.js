@@ -17,7 +17,6 @@ display: none;
 @media (min-width: ${breakpoints.tablet}) {
     display: ${({ $tabletVisible }) =>
       $tabletVisible ? "inline-block" : "none"};
-    /* display: inline-block; */
     font-weight: 700;
     font-style: Bold;
     font-size: 18px;
