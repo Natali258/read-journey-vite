@@ -5,7 +5,6 @@ import Icon from '../../Icon/Icon'
 
 export const ListRecomendedBooksContainer = s.div`
 display: flex;
-// margin-top: 58px;
 flex-direction: column;
 gap: 15px;
 padding: 20px;
