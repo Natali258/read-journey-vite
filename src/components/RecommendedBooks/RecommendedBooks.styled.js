@@ -12,6 +12,7 @@ background-color: var(--container-background-color);
 }
 @media (min-width: ${breakpoints.desktop}) {
     padding: 40px;
+    min-width: 847px;
     min-height: 651px;
 }
 `

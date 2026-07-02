@@ -16,6 +16,8 @@ background-color: var(--container-background-color);
 }
 @media (min-width: ${breakpoints.desktop}) {
   min-height: 651px;
+  min-width: 847px;
+
 }
 `
 export const MyLibraryHeaderRow = s.div`
