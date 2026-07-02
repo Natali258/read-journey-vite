@@ -5,5 +5,4 @@ export const IconSvg = s.svg`
     width: 100%;
     height: 100%;
     display: block;
-    border: 1px solid green;
 `
