@@ -14,6 +14,7 @@ background-color: var(--container-background-color);
 }
 @media (min-width: ${breakpoints.desktop}) {
   gap: 44px;
+
 }
 `
 export const MyBookTitle = s.p`
@@ -30,6 +31,9 @@ color: var(--main-text-color);
 `
 export const MyBookBox = s.div`
 text-align: center;
+@media (min-width: ${breakpoints.desktop}) {
+    margin: 0 100px;
+}
 `
 export const MyBookImg = s.img`
 width: 137px;
