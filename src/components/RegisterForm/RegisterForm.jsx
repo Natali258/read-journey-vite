@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Logo/Logo";
 import {
+  PasswordButton,
+  PasswordWrapper,
+  RegisterIcon,
   StlBtnRegister,
   StlFieldsRegister,
   StlFormRegister,
@@ -15,6 +18,7 @@ import { registerThunk } from "../../redux/authSlice/operations";
 import { useForm } from "react-hook-form";
 
 const RegisterForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const dispatch = useDispatch();
   const submit = (data) => {
@@ -40,11 +44,19 @@ const RegisterForm = () => {
             placeholder="Mail:"
             {...register("email")}
           />
-          <StlInputRegister
-            type="text"
-            placeholder="Password:"
-            {...register("password")}
-          />
+          <PasswordWrapper>
+            <StlInputRegister
+              type={showPassword ? "text" : "password"}
+              placeholder="Password:"
+              {...register("password")}
+            />
+            <PasswordButton
+              type="button"
+              onClick={() => setShowPassword(prev => !prev)}
+            >
+                <RegisterIcon name={showPassword ? "icon-eye-off" : "icon-eye"} color="rgba(249, 249, 249, 1)" />
+            </PasswordButton>
+          </PasswordWrapper>
         </StlFieldsRegister>
         <StlLinkRegister>
           <StlBtnRegister type="submit">Registration</StlBtnRegister>

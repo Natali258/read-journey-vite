@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { breakpoints } from "../../breakpoints ";
+import Icon from "../Icon/Icon";
 
 export const StlLoginContainer = styled.div`
     padding: 20px 20px 40px 20px;
@@ -68,6 +69,7 @@ width: 100%;
 `
 
 export const StlInputLogin = styled.input`
+width: 100%;
 padding: 14px;
 border-radius: 12px;
 background-color: var(--select-background-color);
@@ -81,6 +83,33 @@ color: var(--main-text-color);
     padding: 16px 14px 16px 14px;
 }
 `
+export const PasswordWrapper = styled.div`
+  position: relative;
+`;
+export const PasswordButton = styled.button`
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+`;
+export const LoginIcon = styled(Icon)`
+  width: 20px;
+  height: 20px;
+  /* @media (min-width: ${breakpoints.tablet}) {
+    width: 24px;
+    height: 24px;
+  } */
+  `;
+  
 export const StlLinkLogin = styled.div`
 margin-top: 72px;
 display:flex;
