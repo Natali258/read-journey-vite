@@ -6,7 +6,7 @@ import {
   MyLibraryMessageText,
   MyLibraryMessageTextSpan,
 } from "./MyLibraryMessage.styled";
-import books70 from "../../../assets/img/books70.png";
+import books70 from "../../assets/img/books70.png";
 
 export const MyLibraryMessage = () => {
   return (
