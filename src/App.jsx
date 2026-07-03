@@ -1,12 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import './App.styled.js';
 import { AuthLayout } from "./components/Layouts/AuthLayout";
 import { MainLayout } from "./components/Layouts/MainLayout";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RecommendedPage } from "./pages/RecommendedPage/RecommendedPage";
 import { LibraryPage } from "./pages/LibraryPage/LibraryPage";
-import { AppContainer } from "./App.styled.js";
 import { ReadingPage } from "./pages/ReadingPage/ReadingPage.jsx";
 import { PublicRoute } from "./routes/PublicRoute.jsx";
 import { PrivateRoute } from "./routes/PrivateRoute.jsx";
@@ -27,7 +25,7 @@ function App() {
   }, [dispatch]);
     
   return isLoading ? (<Loader/>) : (
-    <AppContainer>
+    <div>
       <Routes>
         <Route element={<AuthLayout/>}>
           <Route path="/" element={<PublicRoute><LoginPage/></PublicRoute>} />
@@ -41,7 +39,7 @@ function App() {
         </Route>
       </Routes>
       <ToastContainer />
-    </AppContainer>
+    </div>
   );
 }
 

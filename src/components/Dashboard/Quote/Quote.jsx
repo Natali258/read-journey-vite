@@ -5,12 +5,13 @@ import {
   QuoteLiTextSpan,
   QuoteUl,
 } from "./Quote.styled";
+import books from "../../../assets/img/books.png";
 
 export const Quote = () => {
   return (
     <QuoteUl>
         <QuoteLiImg>
-          <img src="/src/assets/img/books.png" alt="books" />
+          <img src={books} alt="books" />
         </QuoteLiImg>
         <QuoteLiText>
           "Books are <QuoteLiTextSpan>windows</QuoteLiTextSpan> to the world,{" "}
