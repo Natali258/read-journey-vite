@@ -80,7 +80,6 @@ const BookSlice = createSlice({
         state.readingBook.readingStatus = "finished";
       })
       .addCase(deleteReadingThunk.fulfilled, (state, action) => {
-        console.log(action);
         state.readingBook.items = action.payload;
     });
   },

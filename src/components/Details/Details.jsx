@@ -8,25 +8,6 @@ import { useSelector } from 'react-redux'
 export const Details = () => {
   const readingStatus = useSelector(selectReadingStatus);
   const book = useSelector(selectReadingBook);
-  console.log(readingStatus);
-  
-  // const lastSession = book.progress?.at(-1);
-  // const shouldShowProgress =
-  // readingStatus === "idle" ||
-  // !lastSession ||
-  // !lastSession.finishPage;
-
-  // const shouldShowDiary =
-  // readingStatus === "reading" && lastSession;
-  
-  // return (
-  //   <div>
-  //     {shouldShowProgress && <Progress/>}
-  //     {shouldShowDiary && <Diary/>}
-  //     {readingStatus === "finished" && <Statistics/>}
-  //   </div>
-  // )
-
   const firstSession = book.progress?.[0];
 
 if (

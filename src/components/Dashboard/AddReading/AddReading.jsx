@@ -11,11 +11,8 @@ export const AddReading = () => {
    const {register, handleSubmit, setValue} = useForm()
    const { openModal } = useModal();
    const book = useSelector(selectReadingBook);
-   console.log(book);
-   
    const sessionStatus = book.progress?.at(-1)?.status;
    const sessionPage = book.progress?.at(-1)?.finishPage
-   console.log(sessionPage);
    const isReading = sessionStatus === "active";
    const dispatch = useDispatch()
    
@@ -45,7 +42,7 @@ export const AddReading = () => {
       <AddReadingTitle>{isReading ? 'Stop page:' : 'Start page:'}</AddReadingTitle>
       <AddReadingForm action="" onSubmit={handleSubmit(submit)}>
         <AddReadingInput type="number" placeholder='Page number:' {...register("page", { valueAsNumber: true })} />
-        <AddReadingBtn type='submit' onClick={searchModal()}>{isReading ? 'To stop' : 'To start'}</AddReadingBtn>
+        <AddReadingBtn type='submit' onClick={searchModal}>{isReading ? 'To stop' : 'To start'}</AddReadingBtn>
       </AddReadingForm>
     </AddReadingContainer>
   )
