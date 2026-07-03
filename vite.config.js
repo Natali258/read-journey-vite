@@ -1,16 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: "/read-journey-vite/",
-  plugins: [
-    react({
-      babel: {
-        plugins: [["babel-plugin-react-compiler"]],
-      },
-    }),
-  ],
-  server: {
-    open: true,
+  plugins: [react(), svgr()],
+  resolve: {
+    alias: {
+      src: '/src',
+      components: '/src/components',
+      pages: '/src/pages',
+      assets: '/src/assets',
+    },
   },
+  base: '/read-journey-vite/',
 });
