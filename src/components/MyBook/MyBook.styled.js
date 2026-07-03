@@ -5,16 +5,16 @@ export const MyBookContainer = s.div`
 display: flex;
 flex-direction: column;
 gap: 40px;
-padding: 40px;
+padding: 40px 20px;
 border-radius: 30px;
 background-color: var(--container-background-color);
 @media (min-width: ${breakpoints.tablet}) {
   gap: 32px;
+  padding: 40px;
   padding-bottom: 25px;
 }
 @media (min-width: ${breakpoints.desktop}) {
   gap: 44px;
-
 }
 `
 export const MyBookTitle = s.p`
@@ -32,7 +32,7 @@ color: var(--main-text-color);
 export const MyBookBox = s.div`
 text-align: center;
 @media (min-width: ${breakpoints.desktop}) {
-    margin: 0 100px;
+    width: 767px;
 }
 `
 export const MyBookImg = s.img`
@@ -56,6 +56,11 @@ color: var(--main-text-color);
     margin-top: 25px;
     font-size: 20px;
     line-height: 100%;
+}
+    @media (min-width: ${breakpoints.desktop}) {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 `
 
